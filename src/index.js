@@ -70,13 +70,16 @@ async function page(env) {
      GROUP BY geo, keyword ORDER BY traffic DESC`
   ).all();
   const today = new Date().toLocaleDateString("sv", { timeZone: "Asia/Taipei" });
+  const next = new Date(Math.ceil(Date.now() / 3.6e6) * 3.6e6).toLocaleTimeString("en-GB", {
+    timeZone: "Asia/Taipei", hour: "2-digit", minute: "2-digit",
+  });
   const cols = GEOS.map((g, i) => {
     const items = results.filter((r) => r.geo === g).slice(0, 8);
     const list = items.length
       ? items
           .map(
             (r) =>
-              `<li><a href="https://trends.google.com/explore?geo=${g}&q=${encodeURIComponent(r.keyword)}" target="_blank" rel="noopener">${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`
+              `<li><a href="${esc(r.news_url || `https://www.google.com/search?q=${encodeURIComponent(r.keyword)}`)}" target="_blank" rel="noopener">${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`
           )
           .join("")
       : `<li class="empty">暫無數據</li>`;
@@ -97,7 +100,7 @@ input,label{display:none}footer{padding:0 16px 10px;color:var(--mute);font-size:
 @media(max-width:760px){main{grid-template-columns:repeat(6,1fr);grid-template-rows:auto 1fr;align-content:start}
 label{display:block;grid-row:1;text-align:center;padding:8px 0;border-radius:8px;cursor:pointer;font-size:14px}
 input:checked+label{background:var(--acc);color:var(--bg)}section{display:none;grid-row:2;grid-column:1/-1}input:checked+label+section{display:block}h2{display:none}}
-</style></head><body><header><h1>BizIdea 商機雷達</h1><span>今日 ${today}・過去 24 小時熱搜</span></header><main>${cols}</main>
+</style></head><body><header><h1>BizIdea 商機雷達</h1><span>今日 ${today}・過去 24 小時熱搜・每小時整點更新，下次 ${next}（港台時間）</span></header><main>${cols}</main>
 <footer>資料來源：Google Trends。每小時更新；AI 商機篩選即將推出。</footer></body></html>`;
 }
 
@@ -108,7 +111,7 @@ export default {
   async fetch(req, env) {
     if (new URL(req.url).pathname !== "/") return new Response("Not found", { status: 404 });
     return new Response(await page(env), {
-      headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300" },
+      headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=60" },
     });
   },
 };
