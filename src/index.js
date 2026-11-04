@@ -50,17 +50,13 @@ async function googleTrends(geo) {
 }
 
 // 每日一次：App Store 免費榜（按排名次序寫入，頁面用 id 排序）
-// 用 Apple 官方 iTunes RSS；新版 rss.marketingtools.apple.com 會拒絕所有 Cloudflare Worker 請求（403）
+// 喺 Cloudflare 上面 itunes.apple.com 舊 RSS 次次 403，新版間中 504（每小時會再試）
 async function appStore(geo, d) {
   const { feed } = await getJSON(
-    `https://itunes.apple.com/${geo.toLowerCase()}/rss/topfreeapplications/limit=20/json`
+    `https://rss.marketingtools.apple.com/api/v2/${geo.toLowerCase()}/apps/top-free/20/apps.json`,
+    { "user-agent": UA }
   );
-  return [].concat(feed.entry ?? []).map((a) => ({
-    keyword: a["im:name"].label,
-    traffic: null,
-    news_url: a.id.label,
-    seen_at: stamp(d),
-  }));
+  return feed.results.map((a) => ({ keyword: a.name, traffic: null, news_url: a.url, seen_at: stamp(d) }));
 }
 
 // 每日一次：維基百科按國家熱門頁面（讀尋日，剔走首頁同 Special: 呢類頁）
