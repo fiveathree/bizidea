@@ -2,7 +2,7 @@
 CREATE TABLE IF NOT EXISTS trends (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   geo TEXT NOT NULL,            -- HK / TW / MO / JP / GB / NL
-  source TEXT NOT NULL,         -- google_trends / x / reddit / ptt
+  source TEXT NOT NULL,         -- google_trends / app_store / wikipedia / x / reddit / ptt
   keyword TEXT NOT NULL,
   traffic INTEGER,              -- 由 "50K+" 轉成 50000；冇就 NULL
   news_url TEXT,
