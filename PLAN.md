@@ -45,11 +45,11 @@
 - 要用 XML 解析（Worker 內建冇 DOMParser，就用輕量 package 或簡單 regex 讀 `<item>`；按減 Code 原則揀最少 code 嗰個）。
 
 ### 階段 3（之後加）
-頭兩個免費、唔使 key、2026-11-04 已測試讀得到，**階段 3 最先做**。
+頭兩個免費、唔使 key，**2026-11-04 已經提早做好**（每小時 cron 入面檢查，當日已攞到嘅地區就唔再讀；頁面上面用「Google 熱搜 / App Store 熱門 / 維基熱門」分頁分開）。
 
 | 來源 | 地區 | 做法 | 備註 |
 |---|---|---|---|
-| App Store 熱門 App | 全部 6 個（**澳門都有**） | Apple 官方 RSS：`https://rss.marketingtools.apple.com/api/v2/{hk,tw,mo,jp,gb,nl}/apps/top-free/20/apps.json`，每日 1 次 | `source = app_store`；`keyword` 放 App 名，`traffic` 放 NULL（只有排名），`news_url` 放 App 連結。只睇免費榜。補返澳門冇 Google Trends 嘅缺口 |
+| App Store 熱門 App | 全部 6 個（**澳門都有**） | Apple 官方 iTunes RSS：`https://itunes.apple.com/{hk,tw,mo,jp,gb,nl}/rss/topfreeapplications/limit=20/json`，每日 1 次。**唔好用**新版 `rss.marketingtools.apple.com`：佢會拒絕所有帶 `Cf-Worker` 標頭嘅請求（Cloudflare 一定會加，403） | `source = app_store`；`keyword` 放 App 名，`traffic` 放 NULL（只有排名），`news_url` 放 App 連結。只睇免費榜。補返澳門冇 Google Trends 嘅缺口 |
 | 維基百科熱門頁面 | 台、日、英、荷（**港、澳冇**：瀏覽量太少，Wikimedia 唔公開） | Wikimedia 官方 API：`https://wikimedia.org/api/rest_v1/metrics/pageviews/top-per-country/{GEO}/all-access/{YYYY/MM/DD}`，每日 1 次讀前一日 | `source = wikipedia`；`traffic` 放 `views_ceil`。要剔走首頁（Main_Page、メインページ、Hoofdpagina…）同所有標題有 `:` 嘅頁（Special:Search、Wikipedia:首页…）。Wikimedia 規定要帶有聯絡方式嘅 User-Agent（例如 repo 網址），咁樣係正常表明身份，唔係偽裝 |
 | X 熱話 | 全部，日本最有用 | Grok API `x_search`，每地區每日 1–2 次 | 每 1,000 次大約 US$5；一次大約 45 秒，要放後台 |
 | Reddit | 英、荷、日、港、台 | 各版公開 RSS，例如 `/r/unitedkingdom/top/.rss?t=day` | 先測 Worker 會唔會俾 Reddit 擋 |
@@ -131,8 +131,8 @@ CREATE TABLE insights (
 - **驗收**：打開網址，一個畫面見到 6 地區今日商機
 
 ### 階段 3：加來源
-- [ ] App Store 免費榜（6 地區，每日 1 次）
-- [ ] 維基百科按國家熱門頁面（台、日、英、荷，每日 1 次，剔走首頁同 `:` 頁）
+- [x] App Store 免費榜（6 地區，每日 1 次）
+- [x] 維基百科按國家熱門頁面（台、日、英、荷，每日 1 次，剔走首頁同 `:` 頁）
 - [ ] Grok `x_search`（每地區每日 1–2 次）
 - [ ] Reddit RSS（先測試能否讀取）
 - [ ] PTT 指定板（先測試）
