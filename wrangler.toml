@@ -8,4 +8,4 @@ crons = ["0 * * * *"] # 每小時
 [[d1_databases]]
 binding = "DB"
 database_name = "bizidea-db"
-database_id = "REPLACE_WITH_D1_ID"
+database_id = "e1910767-7c72-4739-a3f3-d4cf903b6b4e"
