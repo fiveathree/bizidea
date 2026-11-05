@@ -69,7 +69,7 @@ CREATE TABLE trends (
   keyword TEXT NOT NULL,
   traffic INTEGER,              -- 由 "50K+" 轉成 50000；冇就 NULL
   news_url TEXT,
-  seen_at TEXT NOT NULL,        -- ISO 時間
+  seen_at TEXT NOT NULL,        -- ISO 時間：Google 用 RSS pubDate；每日來源用資料日期 T00:00:00Z
   UNIQUE (geo, source, keyword, seen_at)
 );
 
@@ -111,7 +111,7 @@ CREATE TABLE insights (
 ```
 
 - 每格最多顯示 8 條，預設只顯示 🔥 商機。
-- 撳關鍵字：彈出小卡，顯示 AI 嘅 `idea`、流量、新聞連結、Google Trends Explore 連結。
+- 撳關鍵字：彈出小卡，顯示 AI 嘅 `idea`、流量、新聞連結。**唔好連 Google Trends Explore**：新版探索頁冇登入就乜都唔顯示（2026-11-04 實測），舊版就快停用。
 - 手機版：上面 6 個地區變成 tab。
 - 繁體中文介面。
 - favicon：簡單雷達圖示（SVG）。og:image：1200×630，寫「BizIdea 商機雷達」。
@@ -119,15 +119,17 @@ CREATE TABLE insights (
 ## 7. 開發階段同驗收標準
 
 ### 階段 1：收集 Google Trends
-- [ ] Worker 每小時讀 6 個地區 RSS，寫入 `trends`
-- [ ] 重複嘅唔會重複寫
-- [ ] `MO` 冇數據唔會令成個 job 失敗
-- **驗收**：D1 入面見到 6 個地區（或 5 個 + 澳門暫無）嘅資料
+- [x] Worker 每小時讀 6 個地區 RSS，寫入 `trends`
+- [x] 重複嘅唔會重複寫（`seen_at` 用 RSS 嘅 pubDate，重讀只會 upsert 同一行）
+- [x] `MO` 冇數據唔會令成個 job 失敗（Google 回 HTTP 400，只記 log）
+- **驗收**：D1 入面見到 6 個地區（或 5 個 + 澳門暫無）嘅資料 — ✅ 2026-11-05 通過（5 個 + 澳門暫無）
 
 ### 階段 2：AI 篩選 + 頁面
-- [ ] 每日 8:00 跑 AI 分析，寫入 `insights`
+- [ ] 每日 8:00 跑 AI 分析，寫入 `insights`（Cron 用 UTC，即係 `0 0 * * *`）
 - [ ] 一版睇晒頁面，有篩選、彈出小卡、連續上升榜
-- [ ] favicon + og:image
+  - 已提早做：基本一版睇晒頁面（6 地區、每地區 8 條、3 個來源分頁、手機兩行分頁、冇數據顯示「暫無數據」）
+  - 未做：🔥 商機篩選、彈出小卡、連續上升榜
+- [ ] favicon + og:image（favicon 已做；og:image 未做，要用完整 `https://` 網址）
 - **驗收**：打開網址，一個畫面見到 6 地區今日商機
 
 ### 階段 3：加來源
@@ -165,3 +167,8 @@ CREATE TABLE insights (
 - Google 官方 Trends API 仍然係限量 alpha，暫時唔用。
 - 歷史數據要自己儲，開頭幾日「連續上升榜」會好少嘢。
 - 「熱搜」≠「一定賺錢」，AI 建議只作參考。
+- **D1 免費寫入額度（每日 10 萬行）係成個 Cloudflare 帳戶共用**。2026-11-04 另一個項目一次過匯入 13 萬行，令 bizidea 由 14:00 起寫唔到，要等 UTC 午夜。bizidea 自己每日只寫幾千行。
+- 本機 `wrangler dev` 嘅對外請求結果可能同正式環境唔同（例如 Apple RSS），測外部來源要用 `wrangler dev --remote`。
+- 未接 GitHub 自動部署：push 之後要另外跑 `npx wrangler deploy`。
+
+現況總覽（架構、資料、功能、已知問題）見 [README.md](README.md)。
