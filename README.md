@@ -46,6 +46,7 @@
 | 定時收集 | Cloudflare Worker + Cron Trigger | 每小時；免費方案 |
 | 資料庫 | Cloudflare D1（SQLite） | 表 `trends`（用緊）、`insights`（階段 2 用，已建未用） |
 | 前端 | 同一個 Worker 直接出 HTML + CSS | 冇 JavaScript、冇框架、冇 build step；分頁用純 CSS radio + `:has()` |
+| 每日報告 | claude.ai 雲端排程（Claude Code routine，Sonnet 5.5） | 每朝 08:00（港台）讀 `/api/data`，寫 `reports/YYYY-MM-DD.json` commit 入 GitHub；網站由 GitHub 讀出嚟顯示，唔使密碼、唔使 D1 |
 | Log | Workers Observability | Cloudflare dashboard 睇得到每次 cron 讀到幾多條 |
 | 部署 | 本機 `npx wrangler deploy` | 未接 GitHub 自動部署；push GitHub 唔會自動上線 |
 | 依賴 | **零 npm package** | XML 用 regex 解析；成個項目 code 大約 250 行 |
@@ -96,12 +97,14 @@ CREATE TABLE trends (
 - **冇數據**嘅地區顯示「暫無數據」，唔會報錯。
 - 標題列顯示「每小時整點更新，下次 HH:00（港台時間）」。
 - 深色／淺色跟系統；內嵌 SVG 雷達 favicon；繁體中文介面。
-- 頁面 cache 60 秒。
+- **📊 每日商業分析報告**（`/report`，舊報告 `/report/YYYY-MM-DD`）：今日商機（最多 5 個，有商機分同證據）、跨地區趨勢、同之前比較、12 個地區各一句。桌面一版睇晒；手機分「商機／趨勢／各地區」3 個分頁；有上一日／下一日連結。
+- **`/api/data`**：JSON，每個地區每個來源最多 20 條，俾報告排程讀。
+- 頁面 cache 60 秒（報告頁 5 分鐘）。
 - **唔收集任何用戶資料**：冇登入、冇 cookie、冇分析追蹤。
 
 ### 未有（PLAN 階段 2）
 
-- AI 篩選商機（Claude API，每日 1 次）同「🔥 商機 / 全部」篩選
+- 雷達主頁嘅 AI 篩選商機同「🔥 商機 / 全部」篩選（每日報告已經有 AI 分析，但主頁未用）
 - 撳關鍵字彈出小卡（AI 點子、流量、連結）
 - 連續上升榜（過去 7 日出現最多日數）
 - 分享圖 og:image（1200×630）
@@ -129,6 +132,7 @@ CREATE TABLE trends (
 bizidea/
 ├── src/index.js     # Worker：收集（scheduled）+ 網頁（fetch），大約 210 行
 ├── schema.sql       # D1 建表（trends、insights）
+├── reports/         # 每日報告 JSON（排程寫入）+ index.json（日期清單，新到舊）
 ├── wrangler.toml    # Worker 名、每小時 cron、D1 綁定、observability
 ├── PLAN.md          # 開發規格、階段、驗收標準
 └── README.md        # 呢份：現況

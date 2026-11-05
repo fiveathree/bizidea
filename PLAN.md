@@ -142,6 +142,13 @@ CREATE TABLE insights (
 - [ ] PTT 指定板（先測試）
 - **驗收**：新來源喺頁面有標籤分得出；澳門至少有 App Store 資料
 
+### 每日商業分析報告（2026-11-05 加，用戶要求，做法參考 ANL）
+- [x] Worker `/api/data`：12 地區 × 3 來源，每個最多 20 條
+- [x] 報告頁 `/report`、`/report/YYYY-MM-DD`：讀 GitHub `reports/*.json`，一版睇晒，手機 3 個分頁
+- [ ] claude.ai 雲端排程：每日 08:00 港台（cron `0 0 * * *` UTC），Sonnet 5.5，寫 JSON → commit → push main
+- 報告 JSON 欄位：`date`、`generated_at`、`headline`、`opportunities[]`（`title`、`idea`、`evidence`、`regions`、`score` 1–5）、`trends[]`（`title`、`detail`、`regions`）、`watch[]`、`regions{12 地區代碼: 一句}`、`caveats[]`
+- 只用 `/api/data` 嘅數字，唔可以作數；唔係投資建議
+
 ### 之後先考慮（未承諾）
 - 每日 email / LINE 推送當日 Top 5 商機
 - 電商熱賣榜（要先確認對方條款容許）

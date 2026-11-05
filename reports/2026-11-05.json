@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T07:00:00Z",
+  "headline": "AI 助手同短劇 App 橫掃各地排行榜，年尾購物季已經開始",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳中小企開 AI 助手實戰工作坊，教寫文案、客服、整理報表。",
+      "evidence": "ChatGPT、Gemini、Claude、Meta AI 喺有 App 數據嘅 7 個地區都入頭 20；港澳另有 Grok、豆包、千問。",
+      "regions": ["HK", "TW", "MO", "SG"],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "紅果短劇喺港、台、澳 App Store 排第 1；日本有 GoodShort、ReelShort，英國有 FlickReels。",
+      "regions": ["HK", "TW", "MO", "JP", "GB"],
+      "score": 4
+    },
+    {
+      "title": "日本限定商品代購",
+      "idea": "代購無印良品優惠商品、麥當勞光之美少女玩具同 Switch 遊戲去港台。",
+      "evidence": "日本熱搜「無印良品」1 萬、MUJI App 上榜；「プリキュア ハッピーセット」2 千；「ゼルダ オカリナ」2 千。",
+      "regions": ["JP"],
+      "score": 4
+    },
+    {
+      "title": "台灣散戶理財內容",
+      "idea": "做「股市大跌點應對」嘅 ETF 入門短片、電子報或付費講座。",
+      "evidence": "台灣熱搜「股市大跌」「0050」各 1 萬、「三大法人買賣超」5 千、多隻 ETF 代號同上熱搜。",
+      "regions": ["TW"],
+      "score": 3
+    },
+    {
+      "title": "年尾跨境優惠整合",
+      "idea": "整理 Black Friday 同 11.11 跨境優惠，做比價頁或代購團購。",
+      "evidence": "英國「black friday sales」、印度「ps black friday sale」5 千；新加坡 Shopee 11.11、台灣酷澎 11.11 上榜。",
+      "regions": ["GB", "IN", "SG", "TW"],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "各地 App 榜都有 3–6 個 AI 助手；Meta 新 App「Muse」喺日本同新加坡排第 1。",
+      "regions": ["JP", "SG", "HK", "TW", "MO", "GB", "NL"]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "中國短劇 App 喺港台澳登頂，日英亦有多個短劇平台上榜。",
+      "regions": ["HK", "TW", "MO", "JP", "GB"]
+    },
+    {
+      "title": "年尾消費季",
+      "detail": "Black Friday、11.11、荷蘭聖尼古拉斯節（12 月 5 日）抽籤 App 一齊上榜。",
+      "regions": ["GB", "IN", "SG", "TW", "NL"]
+    }
+  ],
+  "watch": [
+    "第一份報告，未有之前數據比較；儲夠 7 日先睇到連續上升。"
+  ],
+  "regions": {
+    "HK": "長者日、優惠券、萬寧 88 折：消費者搵著數。",
+    "TW": "股市大跌同 ETF 搜尋急升；南機場夜市熱搜 5 千。",
+    "MO": "冇 Google 數據；App 榜有天氣、螞蟻銀行同 Trip.com。",
+    "JP": "無印良品熱搜 1 萬；麥當勞光之美少女套餐受追捧。",
+    "KR": "Genesis G90 同首批新市鎮重建受關注。",
+    "SG": "Temu、拼多多、Shopee 11.11 上榜；剩食 App Yindii 冒起。",
+    "TH": "Canva 同 Google Classroom 熱搜：開學期教育需求。",
+    "IN": "PS Black Friday 優惠熱搜 5 千；其餘多係板球同選舉。",
+    "GB": "匯率熱搜 1 萬，英鎊升至脫歐後高位；Vinted、Whatnot 二手熱。",
+    "GB-SCT": "AG Barr Rubicon 飲品回收；其餘多係娛樂。",
+    "NL": "家用電池、暖氣、電價、停電：能源焦慮。",
+    "US": "熱搜幾乎全係選舉同 NBA，商業訊號少。"
+  },
+  "caveats": [
+    "資料得大約兩日",
+    "美國、南韓、泰國、印度 App Store 暫缺",
+    "維基已略過選舉同成人頁面等雜訊"
+  ]
+}
