@@ -47,9 +47,11 @@ async function googleTrends(geo) {
       keyword: tag(item, "title"),
       traffic: parseTraffic(tag(item, "ht:approx_traffic")),
       news_url: tag(item, "ht:news_item_url"),
-      seen_at: new Date(tag(item, "pubDate")).toISOString(),
+      at: new Date(tag(item, "pubDate") ?? NaN),
     }))
-    .filter((t) => t.keyword);
+    // 冇關鍵字或者 pubDate 壞咗就跳過嗰一條，唔好令成個地區冇數據
+    .filter((t) => t.keyword && !isNaN(t.at))
+    .map(({ at, ...t }) => ({ ...t, seen_at: at.toISOString() }));
 }
 
 // 每日一次：App Store 免費榜（按排名次序寫入，頁面用 id 排序）
@@ -138,6 +140,9 @@ const SOURCES = [
   ["app_store", "App Store 熱門"],
   ["wikipedia", "維基熱門"],
 ];
+// 外來連結只准 http(s)，其他（javascript: 之類）一律改做 Google 搜尋
+const link = (url, keyword) =>
+  /^https?:\/\//i.test(url ?? "") ? url : `https://www.google.com/search?q=${encodeURIComponent(keyword)}`;
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => `&#${c.charCodeAt(0)};`);
 const fmt = (n) =>
   n == null ? "" : n >= 1e6 ? `${+(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `${+(n / 1e3).toFixed(1)}K` : `${n}`;
@@ -250,7 +255,7 @@ async function page(env) {
         ? items
             .map((r) => {
               const h = hot?.[g].has(r.keyword);
-              return `<li${h ? ' class="hot"' : ""}><a href="${esc(r.news_url || `https://www.google.com/search?q=${encodeURIComponent(r.keyword)}`)}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${h ? "🔥 " : ""}${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`;
+              return `<li${h ? ' class="hot"' : ""}><a href="${esc(link(r.news_url, r.keyword))}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${h ? "🔥 " : ""}${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`;
             })
             .join("")
         : `<li class="empty">暫無數據</li>`;
@@ -262,7 +267,7 @@ async function page(env) {
     ? rise
         .map(
           (r) =>
-            `<li><a href="https://www.google.com/search?q=${encodeURIComponent(r.keyword)}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${r.hot ? "🔥 " : ""}${esc(r.keyword)}</a><small>${r.days}日 ${r.geos.map((g) => SHORT[g]).join("")}</small></li>`
+            `<li><a href="${esc(link(null, r.keyword))}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${r.hot ? "🔥 " : ""}${esc(r.keyword)}</a><small>${r.days}日 ${r.geos.map((g) => SHORT[g]).join("")}</small></li>`
         )
         .join("")
     : `<li class="empty">資料累積中</li>`;
@@ -279,7 +284,8 @@ async function page(env) {
 *{box-sizing:border-box}body{margin:0;font:15px/1.4 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--fg);height:100dvh;display:flex;flex-direction:column}
 header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:12px 16px}h1{font-size:20px;margin:0}header span{color:var(--mute);font-size:13px}
 nav{display:flex;gap:4px;margin-left:auto}nav label{padding:5px 12px;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:13px;background:var(--card)}
-nav input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--bg)}input{display:none}
+nav input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--bg)}
+input{position:absolute;opacity:0;pointer-events:none}input:focus-visible+label{outline:2px solid var(--acc);outline-offset:2px}
 main{flex:1;min-height:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr)) auto;gap:8px;padding:0 16px 12px}main label{display:none}
 section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;overflow:hidden}
 h2{font-size:14px;margin:0 0 4px;color:var(--acc)}ol{display:none;margin:0;padding:0;list-style:none;counter-reset:n}${showSrc}{display:block}
@@ -358,7 +364,8 @@ i{font-style:normal;font-size:11px;background:var(--tag);color:var(--acc);border
 .opp{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;align-content:start}.opp h2{grid-column:1/-1}
 ul{margin:0;padding-left:18px}li{margin:2px 0}
 .geo{grid-column:1/-1}dl{margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px 12px}dl div{min-width:0}dt{font-weight:600;color:var(--acc);font-size:12px}dd{margin:0;font-size:12px;color:var(--fg)}
-main footer{grid-column:1/-1;padding:0;color:var(--mute);font-size:12px}input,label{display:none}
+main footer{grid-column:1/-1;padding:0;color:var(--mute);font-size:12px}label{display:none}
+input{position:absolute;opacity:0;pointer-events:none}input:focus-visible+label{outline:2px solid var(--acc);outline-offset:2px}
 @media(max-width:760px){main{grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto minmax(0,1fr);align-content:start}
 .headline{font-size:15px}label{display:block;text-align:center;padding:7px 0;border-radius:8px;cursor:pointer}input:checked+label{background:var(--acc);color:var(--bg)}
 section{display:none;grid-column:1/-1;grid-row:3;overflow:auto}#v1:checked~.opp,#v2:checked~.trend,#v3:checked~.geo{display:block}
