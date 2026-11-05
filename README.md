@@ -133,6 +133,7 @@ bizidea/
 ├── src/index.js     # Worker：收集（scheduled）+ 網頁（fetch），大約 210 行
 ├── schema.sql       # D1 建表（trends、insights）
 ├── reports/         # 每日報告 JSON（排程寫入）+ index.json（日期清單，新到舊）
+├── docs/            # report-prompt.md（排程提示）、report-example.json（報告範例）
 ├── wrangler.toml    # Worker 名、每小時 cron、D1 綁定、observability
 ├── PLAN.md          # 開發規格、階段、驗收標準
 └── README.md        # 呢份：現況
