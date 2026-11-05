@@ -122,8 +122,9 @@ CREATE INDEX idx_trends_seen ON trends(seen_at);  -- 頁面只讀最近幾日，
 - [ ] ~~每日 8:00 跑 AI 分析，寫入 `insights`~~ → 改為重用每日報告，見階段 2.5 B1
 - [ ] 一版睇晒頁面，有篩選、彈出小卡、連續上升榜
   - 已提早做：基本一版睇晒頁面（12 地區分兩行、每地區 10 條、3 個來源分頁、手機分頁、冇數據顯示「暫無數據」）
-  - 未做：🔥 商機篩選、彈出小卡、連續上升榜
-- [ ] favicon + og:image（favicon 已做；og:image 未做，要用完整 `https://` 網址）
+  - 已做（階段 2.5）：🔥 商機標記同「只睇商機」、連續上升榜
+  - 未做：彈出小卡
+- [x] favicon + og:image（2026-11-05：`public/og.png`，完整 `https://` 網址）
 - **驗收**：打開網址，一個畫面見到 6 地區今日商機
 
 ### 階段 3：加來源
@@ -148,26 +149,26 @@ CREATE INDEX idx_trends_seen ON trends(seen_at);  -- 頁面只讀最近幾日，
 
 #### 🔴 A. 穩定同成本（先做）
 
-**A1. D1 加 index + 清舊資料**
+**A1. D1 加 index + 清舊資料** — ✅ 2026-11-05（`ORDER BY seen_at, id` 先用到 index）
 - 原因：`loadRows()` 每次讀過去 3 日，`seen_at` 冇 index → 全表掃描；D1 按「掃過嘅行數」計額度，而且帳戶額度同其他項目共用（見第 10 節）。表亦只會一直變大。
 - 做法：
   - `schema.sql` 加 `CREATE INDEX IF NOT EXISTS idx_trends_seen ON trends(seen_at);`，並用 `wrangler d1 execute bizidea-db --remote` 喺正式 DB 執行。
   - `collect()` 每日一次（例如 UTC 00 點嗰次 cron）`DELETE FROM trends WHERE seen_at < 60 日前`。保留 60 日，夠「連續上升榜」用。
 - **驗收**：`EXPLAIN QUERY PLAN` 顯示用到 `idx_trends_seen`；log 見到每日刪除行數。
 
-**A2. 用 Cache API cache 頁面到下個整點**
+**A2. 用 Cache API cache 頁面到下個整點** — ✅ 2026-11-05，改用更簡單嘅 Workers Caching（`[cache] enabled = true` + `s-maxage`），workers.dev 用得、命中唔使行 Worker
 - 原因：而家 `cache-control: max-age=60` 只係瀏覽器 cache，Worker 每次請求都照讀 D1。
 - 做法：`/`、`/api/data` 用 `caches.default`（Cloudflare 原生）cache，有效期到下一個整點 + 2 分鐘（等 cron 寫完）。報告頁維持而家 5 分鐘。唔好加 KV 或其他服務。
 - **驗收**：連續開首頁兩次，第二次 response 有 `cf-cache-status: HIT` 或 log 顯示冇讀 D1。
 
-**A3. og:image 分享圖**（用戶硬性要求，見第 1 節）
+**A3. og:image 分享圖**（用戶硬性要求，見第 1 節）— ✅ 2026-11-05
 - 做法：用 Workers 原生靜態檔案：`wrangler.toml` 加 `[assets] directory = "public"`，放 `public/og.png`（1200×630，PNG，唔好用 SVG，FB／LINE 唔支援）。圖上寫「BizIdea 商機雷達」+ 雷達圖示，同 favicon 同色系（`#0b3d2e`、`#3ddc97`）。
 - 首頁同報告頁 `<head>` 加：`og:title`、`og:description`、`og:image`（完整 `https://bizidea.fiveathree.workers.dev/og.png`）、`og:url`、`twitter:card=summary_large_image`。
 - **驗收**：用 Facebook Sharing Debugger 或 LINE 分享首頁，見到圖。
 
 #### 🟡 B. 商機功能（減 code 做法）
 
-**B1. 首頁 🔥 商機標記：重用每日報告，唔喺 Worker 叫 Claude API**
+**B1. 首頁 🔥 商機標記：重用每日報告，唔喺 Worker 叫 Claude API** — ✅ 2026-11-05（11-05 報告已補 `hot`）
 - 原因：每日報告排程已經用 AI 分析同一份 `/api/data`，再喺 Worker 叫一次 Claude 係重複，仲要喺 Cloudflare 放 API key。
 - 做法：
   - `docs/report-prompt.md` 第 4 步加欄位 `hot`：物件，key = 地區代碼，value = 該地區有商機價值嘅**原文關鍵字**陣列（必須同 `/api/data` 入面嘅 `keyword` 一字不差，每地區最多 10 個）；第 5 步檢查加埋 `hot` 嘅 key 只用 12 個代碼。`docs/report-example.json` 同步加範例。
@@ -176,18 +177,18 @@ CREATE INDEX idx_trends_seen ON trends(seen_at);  -- 頁面只讀最近幾日，
   - 刪走 `schema.sql` 嘅 `insights` 表同相關註解（`DROP TABLE` 前先確認冇資料）；第 4、5、8 節同步改：唔再需要 `ANTHROPIC_API_KEY`。
 - **驗收**：排程跑完之後，首頁見到 🔥；撳「只睇商機」只剩 🔥 嘅關鍵字。
 
-**B2. 連續上升榜**
+**B2. 連續上升榜** — ✅ 2026-11-05
 - 做法：一句 SQL，過去 7 日（台北時間分日）每個關鍵字出現喺幾多日、幾多個地區，只計 `google_trends`，出現 ≥ 2 日先上榜，取頭 10 個。顯示喺首頁 footer 上面一行（橫向，太長用「…」），**唔可以令首頁要捲動**；手機版放喺地區分頁之後做一個「連續上升」分頁。
 - 每個關鍵字顯示：名、出現日數、地區（例如「無印良品 4日 🇯🇵🇹🇼」，國旗或地區簡稱都得）。
 - 如果 B1 已做，`hot` 命中嘅關鍵字排前。
 - **驗收**：首頁桌面版一版睇晒，見到連續上升榜；開頭幾日資料少，顯示「資料累積中」。
 
-**B3. 接 Workers Builds（push 自動部署）**
+**B3. 接 Workers Builds（push 自動部署）** — ⏳ 等用戶喺 dashboard 設定
 - Cloudflare 原生功能，唔使寫 code。Claude Code 要**由頭逐步教用戶**喺 Cloudflare dashboard 接 GitHub `fiveathree/bizidea` 嘅 `main`（按鈕名用現時正確名稱，唔肯定就叫用戶截圖）。
 - 注意：每日報告排程會 push `reports/`，會觸發重新部署，可以接受；如果 dashboard 有「build watch paths」設定，就只監察 `src/`、`public/`、`wrangler.toml`。
 - **驗收**：push 一個小改動，唔使跑 `wrangler deploy` 網站都更新；README「已知問題」刪走呢條。
 
-#### 🟢 C. 小修補（可以一個 commit 做晒）
+#### 🟢 C. 小修補（可以一個 commit 做晒） — ✅ 2026-11-05
 
 - **C1. 鍵盤可用**：分頁嘅 radio 由 `display:none` 改為視覺隱藏（`position:absolute;opacity:0;pointer-events:none`），並加 `input:focus-visible+label{outline:2px solid var(--acc)}`。首頁同報告頁都要改。
 - **C2. 連結安全**：輸出 `href` 前，只接受 `https://` 或 `http://` 開頭，否則改用 Google 搜尋連結。1 個小 function，首頁同報告頁共用。
