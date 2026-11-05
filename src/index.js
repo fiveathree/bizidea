@@ -184,6 +184,23 @@ async function loadRows(env) {
   return results;
 }
 
+// 連續上升榜：過去 7 日（台北時間分日）Google 熱搜出現 ≥ 2 日嘅關鍵字
+const SHORT = { HK: "港", TW: "台", MO: "澳", JP: "日", KR: "韓", SG: "新", TH: "泰", IN: "印", GB: "英", "GB-SCT": "蘇", NL: "荷", US: "美" };
+async function rising(env, hot) {
+  const { results } = await env.DB.prepare(
+    `SELECT keyword, COUNT(DISTINCT date(seen_at, '+8 hours')) days, GROUP_CONCAT(DISTINCT geo) geos
+     FROM trends WHERE source = 'google_trends' AND seen_at >= strftime('%Y-%m-%dT%H:%M:%fZ', 'now', '-7 days')
+     GROUP BY keyword HAVING days >= 2 ORDER BY days DESC, COUNT(DISTINCT geo) DESC LIMIT 30`
+  ).all();
+  return results
+    .map((r) => {
+      const geos = r.geos.split(",");
+      return { ...r, geos, hot: !!hot && geos.some((g) => hot[g]?.has(r.keyword)) };
+    })
+    .sort((a, b) => b.hot - a.hot) // 穩定排序：🔥 排前，其餘維持日數次序
+    .slice(0, SHOW);
+}
+
 // 俾每日報告排程讀：每個地區每個來源最多 20 條
 async function apiData(env) {
   const rows = await loadRows(env);
@@ -221,6 +238,7 @@ async function latestHot(env) {
 
 async function page(env) {
   const [results, hot] = await Promise.all([loadRows(env), latestHot(env)]);
+  const rise = await rising(env, hot);
   const today = new Date().toLocaleDateString("sv", { timeZone: "Asia/Taipei" });
   const next = new Date(Math.ceil(Date.now() / 3.6e6) * 3.6e6).toLocaleTimeString("en-GB", {
     timeZone: "Asia/Taipei", hour: "2-digit", minute: "2-digit",
@@ -240,6 +258,15 @@ async function page(env) {
     }).join("");
     return `<input type="radio" name="t" id="t${g}"${i ? "" : " checked"}><label for="t${g}">${NAMES[g]}</label><section><h2>${NAMES[g]}</h2>${lists}</section>`;
   }).join("");
+  const riseLi = rise.length
+    ? rise
+        .map(
+          (r) =>
+            `<li><a href="https://www.google.com/search?q=${encodeURIComponent(r.keyword)}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${r.hot ? "🔥 " : ""}${esc(r.keyword)}</a><small>${r.days}日 ${r.geos.map((g) => SHORT[g]).join("")}</small></li>`
+        )
+        .join("")
+    : `<li class="empty">資料累積中</li>`;
+  const riseBox = `<input type="radio" name="t" id="trise"><label for="trise">📈 連續上升</label><section class="rise"><h2>📈 連續上升</h2><ol>${riseLi}</ol></section>`;
   const srcTabs = SOURCES.map(
     ([src, name], i) => `<input type="radio" name="s" id="s_${src}"${i ? "" : " checked"}><label for="s_${src}">${name}</label>`
   ).join("") + (hot ? `<input type="checkbox" id="hot"><label for="hot" title="只睇每日 AI 報告揀出嘅商機關鍵字">🔥 只睇商機</label>` : "");
@@ -253,7 +280,7 @@ async function page(env) {
 header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:12px 16px}h1{font-size:20px;margin:0}header span{color:var(--mute);font-size:13px}
 nav{display:flex;gap:4px;margin-left:auto}nav label{padding:5px 12px;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:13px;background:var(--card)}
 nav input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--bg)}input{display:none}
-main{flex:1;min-height:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;padding:0 16px 12px}main label{display:none}
+main{flex:1;min-height:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr)) auto;gap:8px;padding:0 16px 12px}main label{display:none}
 section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;overflow:hidden}
 h2{font-size:14px;margin:0 0 4px;color:var(--acc)}ol{display:none;margin:0;padding:0;list-style:none;counter-reset:n}${showSrc}{display:block}
 li{display:flex;align-items:baseline;gap:4px;font-size:13px;line-height:1.35;padding:2px 0;border-bottom:1px solid var(--line)}li:last-child{border:0}
@@ -261,14 +288,17 @@ li:not(.empty)::before{counter-increment:n;content:counter(n);color:var(--mute);
 a{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit;text-decoration:none}a:hover{text-decoration:underline}
 small{color:var(--mute);font-size:11px;white-space:nowrap}.empty{color:var(--mute)}
 footer{padding:0 16px 8px;color:var(--mute);font-size:12px}
-body:has(#hot:checked) li:not(.hot){display:none}body:has(#hot:checked) ol:not(:has(.hot))::before{content:"今日冇 🔥 商機";color:var(--mute);font-size:13px}
+.rise{grid-column:1/-1;grid-row:3;display:flex;align-items:baseline;gap:10px;padding:5px 10px;white-space:nowrap}.rise h2{margin:0;flex:none}
+.rise ol{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis}.rise li{display:inline;border:0;margin-right:14px}.rise a,.rise small{display:inline}.rise li::before{margin-right:3px}.rise small{margin-left:4px}
+body:has(#hot:checked) section:not(.rise) li:not(.hot){display:none}body:has(#hot:checked) section:not(.rise) ol:not(:has(.hot))::before{content:"今日冇 🔥 商機";color:var(--mute);font-size:13px}
 a.rep{flex:none;padding:4px 10px;border-radius:999px;background:var(--acc);color:var(--bg);font-size:13px}
-@media(max-width:760px){nav{margin-left:0;width:100%}nav label{flex:1;text-align:center;padding:6px 4px}
-main{grid-template-rows:auto auto minmax(0,1fr);align-content:start;gap:6px}
+@media(max-width:760px){nav{margin-left:0;width:100%}nav label{flex:1;text-align:center;padding:6px 2px;white-space:nowrap;font-size:12px}
+main{grid-template-rows:auto auto auto minmax(0,1fr);align-content:start;gap:6px}
 main label{display:block;text-align:center;padding:7px 0;border-radius:8px;cursor:pointer;font-size:13px;white-space:nowrap}
-main input:checked+label{background:var(--acc);color:var(--bg)}section{display:none;grid-row:3;grid-column:1/-1}main input:checked+label+section{display:block}h2{display:none}
+main input:checked+label{background:var(--acc);color:var(--bg)}section,section.rise{display:none;grid-row:4;grid-column:1/-1}main input:checked+label+section{display:block}h2{display:none}
+label[for=trise]{grid-column:1/-1}.rise li{display:flex;border-bottom:1px solid var(--line);margin:0}
 li{font-size:15px;padding:6px 0}small{font-size:12px}}
-</style></head><body><header><h1>BizIdea 商機雷達</h1><a class="rep" href="/report">📊 今日報告</a><span>今日 ${today}・每小時整點更新，下次 ${next}（港台時間）</span><nav>${srcTabs}</nav></header><main>${cols}</main>
+</style></head><body><header><h1>BizIdea 商機雷達</h1><a class="rep" href="/report">📊 今日報告</a><span>今日 ${today}・每小時整點更新，下次 ${next}（港台時間）</span><nav>${srcTabs}</nav></header><main>${cols}${riseBox}</main>
 <footer>資料來源：Google Trends（過去 24 小時，數字係大約搜尋量）・Apple App Store 免費榜（今日排名）・Wikimedia 維基百科（前一日瀏覽量）。澳門冇 Google 數據；港澳冇維基數據；蘇格蘭只有 Google 數據（App Store 同維基併入英國）。${hot ? "🔥 = 最新每日報告由 AI 揀出嘅商機關鍵字。" : ""}</footer></body></html>`;
 }
 
