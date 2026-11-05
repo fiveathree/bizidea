@@ -183,7 +183,7 @@ CREATE INDEX idx_trends_seen ON trends(seen_at);  -- 頁面只讀最近幾日，
 - 如果 B1 已做，`hot` 命中嘅關鍵字排前。
 - **驗收**：首頁桌面版一版睇晒，見到連續上升榜；開頭幾日資料少，顯示「資料累積中」。
 
-**B3. 接 Workers Builds（push 自動部署）** — ⏳ 等用戶喺 dashboard 設定
+**B3. 接 Workers Builds（push 自動部署）** — ✅ 2026-11-05（Settings → Builds 接咗 `fiveathree/bizidea` `main`；build watch paths：包括 `*`、排除 `reports/*`；冇開 Preview builds）
 - Cloudflare 原生功能，唔使寫 code。Claude Code 要**由頭逐步教用戶**喺 Cloudflare dashboard 接 GitHub `fiveathree/bizidea` 嘅 `main`（按鈕名用現時正確名稱，唔肯定就叫用戶截圖）。
 - 注意：每日報告排程會 push `reports/`，會觸發重新部署，可以接受；如果 dashboard 有「build watch paths」設定，就只監察 `src/`、`public/`、`wrangler.toml`。
 - **驗收**：push 一個小改動，唔使跑 `wrangler deploy` 網站都更新；README「已知問題」刪走呢條。
@@ -229,6 +229,5 @@ CREATE INDEX idx_trends_seen ON trends(seen_at);  -- 頁面只讀最近幾日，
 - 「熱搜」≠「一定賺錢」，AI 建議只作參考。
 - **D1 免費寫入額度（每日 10 萬行）係成個 Cloudflare 帳戶共用**。2026-11-04 另一個項目一次過匯入 13 萬行，令 bizidea 由 14:00 起寫唔到，要等 UTC 午夜。bizidea 自己每日只寫幾千行。
 - 本機 `wrangler dev` 嘅對外請求結果可能同正式環境唔同（例如 Apple RSS），測外部來源要用 `wrangler dev --remote`。
-- 未接 GitHub 自動部署：push 之後要另外跑 `npx wrangler deploy`。
 
 現況總覽（架構、資料、功能、已知問題）見 [README.md](README.md)。

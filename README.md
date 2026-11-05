@@ -14,7 +14,7 @@
 |---|---|---|
 | 1 | 每小時收集 Google Trends | ✅ 完成（2026-11-05 驗收：原本 6 個地區，5 個有資料，澳門 Google 冇數據）；同日加到 12 個地區 |
 | 2 | AI 篩選商機 + 完整頁面 | 🟡 頁面、每日報告、🔥 商機標記、連續上升榜已上線；**彈出小卡未做** |
-| 2.5 | 優化（index、cache、og:image、🔥、連續上升、小修補） | ✅ 2026-11-05 做完，只差接 Workers Builds 自動部署（要用戶喺 dashboard 設定） |
+| 2.5 | 優化（index、cache、og:image、🔥、連續上升、小修補） | ✅ 2026-11-05 做完（包括 Workers Builds 自動部署） |
 | 3 | 加來源 | 🟡 App Store、維基百科已提早做好；X（Grok）、Reddit、PTT 未做 |
 
 首頁顯示原始熱門資料，最新每日報告揀出嘅商機關鍵字前面有 🔥，撳「🔥 只睇商機」就只顯示嗰啲。
@@ -55,7 +55,7 @@
 | 前端 | 同一個 Worker 直接出 HTML + CSS | 冇 JavaScript、冇框架、冇 build step；分頁用純 CSS radio + `:has()` |
 | 每日報告 + AI 篩選 | claude.ai 雲端排程（Claude Code routine，Sonnet 5.5） | 每朝 08:00（港台）讀 `/api/data`，寫 `reports/YYYY-MM-DD.json` commit 入 GitHub；報告嘅 `hot` 就係首頁 🔥。Worker 唔叫 AI，唔使 API key |
 | Log | Workers Observability | Cloudflare dashboard 睇得到每次 cron 讀到幾多條、清走幾多行 |
-| 部署 | 本機 `npx wrangler deploy` | 準備接 Workers Builds（push main 自動部署） |
+| 部署 | Workers Builds：push `main` 自動跑 `npx wrangler deploy` | 排除 `reports/*`，每日報告 push 唔會觸發部署 |
 | 依賴 | **零 npm package** | XML 用 regex 解析；成個項目 code 大約 400 行 |
 
 成個專案遵守「減 Code」原則（見 PLAN.md 第 1 節）：先用平台原生功能，最後先自己寫，寫最少。
@@ -133,7 +133,6 @@ CREATE INDEX idx_trends_seen ON trends(seen_at);
 | Apple 舊版 iTunes RSS 喺 Cloudflare 上次次 403 | 唔用得 | 本機 `wrangler dev` 測試結果同正式環境相反，要用 `wrangler dev --remote` 先測得準 |
 | Google Trends 新版「探索」頁要登入先有內容 | 唔可以連去 Explore | 改為連去相關新聞 |
 | 時區 | Cron 用 UTC；頁面顯示港台時間（UTC+8） | 每日來源用 UTC 日期分日 |
-| 未接 GitHub 自動部署 | push 之後要另外 `wrangler deploy` | 之後可以考慮接 Workers Builds |
 
 ---
 
