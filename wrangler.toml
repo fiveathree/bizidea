@@ -10,6 +10,9 @@ binding = "DB"
 database_name = "bizidea-db"
 database_id = "e1910767-7c72-4739-a3f3-d4cf903b6b4e"
 
+[assets]
+directory = "public" # 靜態檔案（og.png 分享圖），由 Cloudflare 直接回應，唔使行 Worker
+
 [cache]
 enabled = true # Workers Caching：按回應嘅 Cache-Control cache 喺 Cloudflare 邊緣，命中就唔使讀 D1
 

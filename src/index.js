@@ -147,6 +147,16 @@ const FAVICON =
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#0b3d2e"/><circle cx="16" cy="16" r="9" fill="none" stroke="#3ddc97" stroke-width="2"/><path d="M16 16L26 9" stroke="#3ddc97" stroke-width="2.5"/><circle cx="21" cy="19" r="2" fill="#ffd166"/></svg>`
   );
 
+// 分享預覽（FB／LINE／WhatsApp／X）：圖喺 public/og.png
+const SITE = "https://bizidea.fiveathree.workers.dev";
+const DESC = "港、台、澳、日、韓、新、泰、印、英、蘇格蘭、荷、美 12 個地區每日網上熱搜、熱門 App 同熱門話題，一版睇晒。";
+const og = (title, desc, path) =>
+  `<meta property="og:type" content="website"><meta property="og:site_name" content="BizIdea 商機雷達">` +
+  `<meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}">` +
+  `<meta property="og:url" content="${SITE}${esc(path)}"><meta property="og:image" content="${SITE}/og.png">` +
+  `<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">` +
+  `<meta name="twitter:card" content="summary_large_image">`;
+
 // 每個地區 + 來源揀最多 SHOW 條：
 // Google 熱搜 = 過去 24 小時、按流量；App Store = 最新一日、按排名；維基 = 最新一日、按瀏覽量
 function pick(rows, geo, source, n = SHOW) {
@@ -223,7 +233,7 @@ async function page(env) {
   ).join("");
   const showSrc = SOURCES.map(([src]) => `body:has(#s_${src}:checked) ol.${src}`).join(",");
   return `<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BizIdea 商機雷達</title><meta name="description" content="港、台、澳、日、韓、新、泰、印、英、蘇格蘭、荷、美 12 個地區每日網上熱搜、熱門 App 同熱門話題，一版睇晒。">
+<title>BizIdea 商機雷達</title><meta name="description" content="${DESC}">${og("BizIdea 商機雷達", DESC, "/")}
 <link rel="icon" href="${FAVICON}"><style>
 :root{--bg:#f6f7f5;--card:#fff;--fg:#1c2421;--mute:#6b7570;--line:#e3e6e3;--acc:#0b7a55}
 @media(prefers-color-scheme:dark){:root{--bg:#121614;--card:#1b201e;--fg:#e8ece9;--mute:#94a09a;--line:#2b322f;--acc:#3ddc97}}
@@ -286,7 +296,11 @@ async function reportPage(env, day) {
 <footer>${arr(r.caveats).map(esc).join("・")}${r.caveats?.length ? "・" : ""}AI 根據公開熱門資料寫成，只作參考，唔係投資建議。</footer>`;
 
   return `<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${day ? `${esc(day)} ` : ""}商業分析報告｜BizIdea 商機雷達</title><meta name="description" content="${esc(r?.headline ?? "BizIdea 每日商業分析報告")}">
+<title>${day ? `${esc(day)} ` : ""}商業分析報告｜BizIdea 商機雷達</title><meta name="description" content="${esc(r?.headline ?? "BizIdea 每日商業分析報告")}">${og(
+    `${day ? `${day} ` : ""}商業分析報告｜BizIdea`,
+    r?.headline ?? "BizIdea 每日商業分析報告",
+    day ? `/report/${day}` : "/report"
+  )}
 <link rel="icon" href="${FAVICON}"><style>
 :root{--bg:#f6f7f5;--card:#fff;--fg:#1c2421;--mute:#6b7570;--line:#e3e6e3;--acc:#0b7a55;--tag:#e6f2ec}
 @media(prefers-color-scheme:dark){:root{--bg:#121614;--card:#1b201e;--fg:#e8ece9;--mute:#94a09a;--line:#2b322f;--acc:#3ddc97;--tag:#21302a}}
