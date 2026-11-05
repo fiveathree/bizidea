@@ -9,6 +9,8 @@ CREATE TABLE IF NOT EXISTS trends (
   seen_at TEXT NOT NULL,        -- ISO 時間（Google Trends 用 RSS 嘅 pubDate，咁每小時重讀都唔會重複）
   UNIQUE (geo, source, keyword, seen_at)
 );
+-- 頁面只讀最近幾日：冇呢個 index 就要全表掃描（D1 按掃過嘅行數計額度）
+CREATE INDEX IF NOT EXISTS idx_trends_seen ON trends(seen_at);
 
 -- AI 每日分析結果（階段 2 先用）
 CREATE TABLE IF NOT EXISTS insights (

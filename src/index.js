@@ -118,6 +118,14 @@ async function collect(env) {
     for (const t of r.value) rows.push(stmt.bind(geo, source, t.keyword, t.traffic, t.news_url, t.seen_at));
   });
   if (rows.length) await env.DB.batch(rows);
+
+  // 每日一次（UTC 00 點）清走 60 日前嘅資料，表唔會無限變大
+  if (new Date().getUTCHours() === 0) {
+    const { meta } = await env.DB.prepare(
+      `DELETE FROM trends WHERE seen_at < strftime('%Y-%m-%dT%H:%M:%fZ', 'now', '-60 days')`
+    ).run();
+    console.log(`清走 60 日前資料：${meta.changes} 行`);
+  }
 }
 
 const SHOW = 10; // 每個地區顯示幾多條
@@ -161,7 +169,7 @@ function pick(rows, geo, source, n = SHOW) {
 async function loadRows(env) {
   const { results } = await env.DB.prepare(
     `SELECT geo, source, keyword, traffic, news_url, seen_at FROM trends
-     WHERE seen_at >= strftime('%Y-%m-%dT%H:%M:%fZ', 'now', '-3 days') ORDER BY id`
+     WHERE seen_at >= strftime('%Y-%m-%dT%H:%M:%fZ', 'now', '-3 days') ORDER BY seen_at, id` // 咁先用到 idx_trends_seen；同一日內按 id = App Store 排名
   ).all();
   return results;
 }
