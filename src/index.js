@@ -309,8 +309,17 @@ section{display:none;grid-column:1/-1;grid-row:3;overflow:auto}#v1:checked~.opp,
 </style></head><body><header><h1>商業分析報告</h1><span>${esc(day ?? "")}</span><a href="/">← 返雷達</a><nav>${navLinks}</nav></header><main>${body}</main></body></html>`;
 }
 
-const html = (s, maxAge = 60) =>
-  new Response(s, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": `public, max-age=${maxAge}` } });
+// Cloudflare 邊緣 cache（Workers Caching，見 wrangler.toml [cache]）：s-maxage = 邊緣存幾耐，max-age = 瀏覽器存幾耐
+const cc = (edge, browser = 60) => `public, max-age=${Math.min(edge, browser)}, s-maxage=${edge}`;
+// 到下一個「整點 + 2 分鐘」（等 cron 寫完 D1）嘅秒數
+const untilNextHour = () => {
+  const now = Date.now() / 1e3;
+  let t = Math.floor(now / 3600) * 3600 + 120;
+  if (t <= now) t += 3600;
+  return Math.ceil(t - now);
+};
+const html = (s, edge) =>
+  new Response(s, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": cc(edge) } });
 
 export default {
   async scheduled(event, env, ctx) {
@@ -318,10 +327,10 @@ export default {
   },
   async fetch(req, env) {
     const path = new URL(req.url).pathname;
-    if (path === "/") return html(await page(env));
+    if (path === "/") return html(await page(env), untilNextHour());
     if (path === "/api/data")
       return new Response(JSON.stringify(await apiData(env)), {
-        headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=60" },
+        headers: { "content-type": "application/json; charset=utf-8", "cache-control": cc(untilNextHour()) },
       });
     const m = path.match(/^\/report(?:\/(\d{4}-\d{2}-\d{2}))?\/?$/);
     if (m) return html(await reportPage(env, m[1]), 300);
