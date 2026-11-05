@@ -4,7 +4,7 @@
 
 ## 0. 一句講晒
 
-每日自動收集 **香港、台灣、澳門、日本、英國、荷蘭** 嘅網上熱搜同熱話，用 AI 篩走純新聞 / 娛樂，淨低「可以變成生意」嘅關鍵字，喺**一版睇晒**嘅網頁顯示。
+每日自動收集 **香港、台灣、澳門、日本、南韓、新加坡、泰國、印度、英國、蘇格蘭、荷蘭、美國**（12 個地區；2026-11-05 由 6 個加到 12 個）嘅網上熱搜同熱話，用 AI 篩走純新聞 / 娛樂，淨低「可以變成生意」嘅關鍵字，喺**一版睇晒**嘅網頁顯示。
 
 ## 1. 必須遵守嘅開發原則（「減 Code」，按次序）
 
@@ -39,7 +39,7 @@
 ### 階段 1（必做）
 **Google Trends「Trending Now」RSS**（公開、免費）
 - 網址格式：`https://trends.google.com/trending/rss?geo={GEO}`
-- GEO：`HK`、`TW`、`MO`、`JP`、`GB`、`NL`
+- GEO：`HK`、`TW`、`MO`、`JP`、`KR`、`SG`、`TH`、`IN`、`GB`、`GB-SCT`（蘇格蘭，子地區）、`NL`、`US`
 - **澳門 `MO` 未確認有冇數據**：第一次跑要測試，冇數據就喺頁面標「暫無數據」，唔好報錯。
 - 每個地區大約 10–20 條，有「大約流量」（例如 `200+`、`50K+`）同相關新聞連結。
 - 要用 XML 解析（Worker 內建冇 DOMParser，就用輕量 package 或簡單 regex 讀 `<item>`；按減 Code 原則揀最少 code 嗰個）。
@@ -49,10 +49,10 @@
 
 | 來源 | 地區 | 做法 | 備註 |
 |---|---|---|---|
-| App Store 熱門 App | 全部 6 個（**澳門都有**） | Apple 官方 RSS：`https://rss.marketingtools.apple.com/api/v2/{hk,tw,mo,jp,gb,nl}/apps/top-free/20/apps.json`，每日 1 次。喺 Cloudflare 上面實測（2026-11-04）：呢個網址大多 200、間中 504（每小時會再試）；舊 `itunes.apple.com/.../rss/topfreeapplications` 次次 403，**唔好用**。注意本機 `wrangler dev` 結果相反，要用 `wrangler dev --remote` 先測得準 | `source = app_store`；`keyword` 放 App 名，`traffic` 放 NULL（只有排名），`news_url` 放 App 連結。只睇免費榜。補返澳門冇 Google Trends 嘅缺口 |
-| 維基百科熱門頁面 | 台、日、英、荷（**港、澳冇**：瀏覽量太少，Wikimedia 唔公開） | Wikimedia 官方 API：`https://wikimedia.org/api/rest_v1/metrics/pageviews/top-per-country/{GEO}/all-access/{YYYY/MM/DD}`，每日 1 次讀前一日 | `source = wikipedia`；`traffic` 放 `views_ceil`。要剔走首頁（Main_Page、メインページ、Hoofdpagina…）同所有標題有 `:` 嘅頁（Special:Search、Wikipedia:首页…）。Wikimedia 規定要帶有聯絡方式嘅 User-Agent（例如 repo 網址），咁樣係正常表明身份，唔係偽裝 |
+| App Store 熱門 App | 11 個（**澳門都有**；蘇格蘭冇獨立商店，跳過） | Apple 官方 RSS：`https://rss.marketingtools.apple.com/api/v2/{國家碼細楷}/apps/top-free/20/apps.json`，每日 1 次。喺 Cloudflare 上面實測（2026-11-04）：呢個網址大多 200、間中 504（每小時會再試）；舊 `itunes.apple.com/.../rss/topfreeapplications` 次次 403，**唔好用**。注意本機 `wrangler dev` 結果相反，要用 `wrangler dev --remote` 先測得準 | `source = app_store`；`keyword` 放 App 名，`traffic` 放 NULL（只有排名），`news_url` 放 App 連結。只睇免費榜。補返澳門冇 Google Trends 嘅缺口 |
+| 維基百科熱門頁面 | 9 個：台、日、韓、新、泰、印、英、荷、美（**港、澳冇**：Wikimedia 唔公開；**蘇格蘭冇**：只有國家級，跳過） | Wikimedia 官方 API：`https://wikimedia.org/api/rest_v1/metrics/pageviews/top-per-country/{GEO}/all-access/{YYYY/MM/DD}`，每日 1 次讀前一日 | `source = wikipedia`；`traffic` 放 `views_ceil`。要剔走首頁（Main_Page、メインページ、Hoofdpagina…）同所有標題有 `:` 嘅頁（Special:Search、Wikipedia:首页…）。Wikimedia 規定要帶有聯絡方式嘅 User-Agent（例如 repo 網址），咁樣係正常表明身份，唔係偽裝 |
 | X 熱話 | 全部，日本最有用 | Grok API `x_search`，每地區每日 1–2 次 | 每 1,000 次大約 US$5；一次大約 45 秒，要放後台 |
-| Reddit | 英、荷、日、港、台 | 各版公開 RSS，例如 `/r/unitedkingdom/top/.rss?t=day` | 先測 Worker 會唔會俾 Reddit 擋 |
+| Reddit | 英、蘇格蘭、荷、美、印、新、日、港、台 | 各版公開 RSS，例如 `/r/unitedkingdom/top/.rss?t=day` | 先測 Worker 會唔會俾 Reddit 擋 |
 | PTT | 台灣 | 網頁版公開板（例如 Lifeismoney、e-shopping） | 先測；八卦版要 18 歲確認 cookie，唔做 |
 
 ### 明確唔做（v1）
@@ -64,7 +64,7 @@
 -- 每次收集到嘅原始熱搜
 CREATE TABLE trends (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  geo TEXT NOT NULL,            -- HK / TW / MO / JP / GB / NL
+  geo TEXT NOT NULL,            -- HK TW MO JP KR SG TH IN GB GB-SCT NL US
   source TEXT NOT NULL,         -- google_trends / app_store / wikipedia / x / reddit / ptt
   keyword TEXT NOT NULL,
   traffic INTEGER,              -- 由 "50K+" 轉成 50000；冇就 NULL
@@ -102,7 +102,9 @@ CREATE TABLE insights (
 ┌──────────────────────────────────────────────┐
 │ BizIdea 商機雷達   今日 2026-11-04   [篩選：🔥商機 / 全部] │
 ├───────┬───────┬───────┬───────┬───────┬───────┤
-│ 香港   │ 台灣   │ 澳門   │ 日本   │ 英國   │ 荷蘭   │
+│ 香港   │ 台灣   │ 澳門   │ 日本   │ 南韓   │ 新加坡 │
+├───────┼───────┼───────┼───────┼───────┼───────┤
+│ 泰國   │ 印度   │ 英國   │ 蘇格蘭 │ 荷蘭   │ 美國   │
 │ 🔥… 5 │ 🔥… 4 │ 暫無   │ 🔥… 5 │ …     │ …     │
 │ 📰…   │ …     │       │ …     │       │       │
 ├──────────────────────────────────────────────┤
@@ -110,9 +112,9 @@ CREATE TABLE insights (
 └──────────────────────────────────────────────┘
 ```
 
-- 每格最多顯示 8 條，預設只顯示 🔥 商機。
+- 12 個地區分兩行，每格最多顯示 10 條（單行、太長用「…」截斷），預設只顯示 🔥 商機。
 - 撳關鍵字：彈出小卡，顯示 AI 嘅 `idea`、流量、新聞連結。**唔好連 Google Trends Explore**：新版探索頁冇登入就乜都唔顯示（2026-11-04 實測），舊版就快停用。
-- 手機版：上面 6 個地區變成 tab。
+- 手機版：12 個地區變成 2 行 tab（每行 6 個，位置固定）。
 - 繁體中文介面。
 - favicon：簡單雷達圖示（SVG）。og:image：1200×630，寫「BizIdea 商機雷達」。
 
@@ -127,7 +129,7 @@ CREATE TABLE insights (
 ### 階段 2：AI 篩選 + 頁面
 - [ ] 每日 8:00 跑 AI 分析，寫入 `insights`（Cron 用 UTC，即係 `0 0 * * *`）
 - [ ] 一版睇晒頁面，有篩選、彈出小卡、連續上升榜
-  - 已提早做：基本一版睇晒頁面（6 地區、每地區 8 條、3 個來源分頁、手機兩行分頁、冇數據顯示「暫無數據」）
+  - 已提早做：基本一版睇晒頁面（12 地區分兩行、每地區 10 條、3 個來源分頁、手機分頁、冇數據顯示「暫無數據」）
   - 未做：🔥 商機篩選、彈出小卡、連續上升榜
 - [ ] favicon + og:image（favicon 已做；og:image 未做，要用完整 `https://` 網址）
 - **驗收**：打開網址，一個畫面見到 6 地區今日商機

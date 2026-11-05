@@ -1,4 +1,7 @@
-const GEOS = ["HK", "TW", "MO", "JP", "GB", "NL"];
+// 頁面次序：第一行亞洲東部，第二行其餘；GB-SCT = 蘇格蘭（Google Trends 子地區）
+const GEOS = ["HK", "TW", "MO", "JP", "KR", "SG", "TH", "IN", "GB", "GB-SCT", "NL", "US"];
+// 結構上冇數據，唔使每個鐘去試：Apple 冇蘇格蘭商店；Wikimedia 唔公開港澳，亦冇蘇格蘭
+const SKIP = { app_store: ["GB-SCT"], wikipedia: ["HK", "MO", "GB-SCT"] };
 const UA = "BizIdea/1.0 (https://github.com/fiveathree/bizidea)"; // Wikimedia 規定要表明身份
 
 const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'" };
@@ -95,8 +98,10 @@ async function collect(env) {
   const jobs = [];
   for (const g of GEOS) {
     jobs.push(["google_trends", g, () => googleTrends(g)]);
-    if (!have.has(`app_store${g}`)) jobs.push(["app_store", g, () => appStore(g, appDay)]);
-    if (!have.has(`wikipedia${g}`)) jobs.push(["wikipedia", g, () => wikipedia(g, wikiDay)]);
+    if (!have.has(`app_store${g}`) && !SKIP.app_store.includes(g))
+      jobs.push(["app_store", g, () => appStore(g, appDay)]);
+    if (!have.has(`wikipedia${g}`) && !SKIP.wikipedia.includes(g))
+      jobs.push(["wikipedia", g, () => wikipedia(g, wikiDay)]);
   }
   const results = await Promise.allSettled(jobs.map(([, , run]) => run()));
 
@@ -115,7 +120,11 @@ async function collect(env) {
   if (rows.length) await env.DB.batch(rows);
 }
 
-const NAMES = { HK: "香港", TW: "台灣", MO: "澳門", JP: "日本", GB: "英國", NL: "荷蘭" };
+const SHOW = 10; // 每個地區顯示幾多條
+const NAMES = {
+  HK: "香港", TW: "台灣", MO: "澳門", JP: "日本", KR: "南韓", SG: "新加坡",
+  TH: "泰國", IN: "印度", GB: "英國", "GB-SCT": "蘇格蘭", NL: "荷蘭", US: "美國",
+};
 const SOURCES = [
   ["google_trends", "Google 熱搜"],
   ["app_store", "App Store 熱門"],
@@ -130,7 +139,7 @@ const FAVICON =
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#0b3d2e"/><circle cx="16" cy="16" r="9" fill="none" stroke="#3ddc97" stroke-width="2"/><path d="M16 16L26 9" stroke="#3ddc97" stroke-width="2.5"/><circle cx="21" cy="19" r="2" fill="#ffd166"/></svg>`
   );
 
-// 每個地區 + 來源揀最多 8 條：
+// 每個地區 + 來源揀最多 SHOW 條：
 // Google 熱搜 = 過去 24 小時、按流量；App Store = 最新一日、按排名；維基 = 最新一日、按瀏覽量
 function pick(rows, geo, source) {
   const mine = rows.filter((r) => r.geo === geo && r.source === source);
@@ -141,12 +150,12 @@ function pick(rows, geo, source) {
       const b = best.get(r.keyword);
       if (!b || r.traffic > b.traffic) best.set(r.keyword, { ...r, news_url: r.news_url || b?.news_url });
     }
-    return [...best.values()].sort((a, b) => b.traffic - a.traffic).slice(0, 8);
+    return [...best.values()].sort((a, b) => b.traffic - a.traffic).slice(0, SHOW);
   }
   const latest = mine.reduce((m, r) => (r.seen_at > m ? r.seen_at : m), "");
   const list = mine.filter((r) => r.seen_at === latest);
   if (source === "wikipedia") list.sort((a, b) => b.traffic - a.traffic);
-  return list.slice(0, 8);
+  return list.slice(0, SHOW);
 }
 
 async function page(env) {
@@ -165,7 +174,7 @@ async function page(env) {
         ? items
             .map(
               (r) =>
-                `<li><a href="${esc(r.news_url || `https://www.google.com/search?q=${encodeURIComponent(r.keyword)}`)}" target="_blank" rel="noopener">${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`
+                `<li><a href="${esc(r.news_url || `https://www.google.com/search?q=${encodeURIComponent(r.keyword)}`)}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`
             )
             .join("")
         : `<li class="empty">暫無數據</li>`;
@@ -178,7 +187,7 @@ async function page(env) {
   ).join("");
   const showSrc = SOURCES.map(([src]) => `body:has(#s_${src}:checked) ol.${src}`).join(",");
   return `<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BizIdea 商機雷達</title><meta name="description" content="香港、台灣、澳門、日本、英國、荷蘭每日網上熱搜、熱門 App 同熱門話題，一版睇晒。">
+<title>BizIdea 商機雷達</title><meta name="description" content="港、台、澳、日、韓、新、泰、印、英、蘇格蘭、荷、美 12 個地區每日網上熱搜、熱門 App 同熱門話題，一版睇晒。">
 <link rel="icon" href="${FAVICON}"><style>
 :root{--bg:#f6f7f5;--card:#fff;--fg:#1c2421;--mute:#6b7570;--line:#e3e6e3;--acc:#0b7a55}
 @media(prefers-color-scheme:dark){:root{--bg:#121614;--card:#1b201e;--fg:#e8ece9;--mute:#94a09a;--line:#2b322f;--acc:#3ddc97}}
@@ -186,18 +195,21 @@ async function page(env) {
 header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:12px 16px}h1{font-size:20px;margin:0}header span{color:var(--mute);font-size:13px}
 nav{display:flex;gap:4px;margin-left:auto}nav label{padding:5px 12px;border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:13px;background:var(--card)}
 nav input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--bg)}input{display:none}
-main{flex:1;min-height:0;display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:0 16px 16px}main label{display:none}
-section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;overflow:hidden}
-h2{font-size:15px;margin:0 0 6px;color:var(--acc)}ol{display:none;margin:0;padding-left:20px}${showSrc}{display:block}
-li{overflow-wrap:anywhere;padding:4px 0;border-bottom:1px solid var(--line)}li:last-child{border:0}
-a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}small{color:var(--mute);margin-left:6px;font-size:12px}.empty{list-style:none;margin-left:-20px;color:var(--mute)}
-footer{padding:0 16px 10px;color:var(--mute);font-size:12px}
+main{flex:1;min-height:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;padding:0 16px 12px}main label{display:none}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;overflow:hidden}
+h2{font-size:14px;margin:0 0 4px;color:var(--acc)}ol{display:none;margin:0;padding:0;list-style:none;counter-reset:n}${showSrc}{display:block}
+li{display:flex;align-items:baseline;gap:4px;font-size:13px;line-height:1.35;padding:2px 0;border-bottom:1px solid var(--line)}li:last-child{border:0}
+li:not(.empty)::before{counter-increment:n;content:counter(n);color:var(--mute);font-size:11px;min-width:1.4em}
+a{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit;text-decoration:none}a:hover{text-decoration:underline}
+small{color:var(--mute);font-size:11px;white-space:nowrap}.empty{color:var(--mute)}
+footer{padding:0 16px 8px;color:var(--mute);font-size:12px}
 @media(max-width:760px){nav{margin-left:0;width:100%}nav label{flex:1;text-align:center;padding:6px 4px}
-main{grid-template-rows:auto 1fr;align-content:start}
-main label{display:block;grid-row:1;text-align:center;padding:8px 0;border-radius:8px;cursor:pointer;font-size:14px}
-main input:checked+label{background:var(--acc);color:var(--bg)}section{display:none;grid-row:2;grid-column:1/-1}main input:checked+label+section{display:block}h2{display:none}}
+main{grid-template-rows:auto auto minmax(0,1fr);align-content:start;gap:6px}
+main label{display:block;text-align:center;padding:7px 0;border-radius:8px;cursor:pointer;font-size:13px;white-space:nowrap}
+main input:checked+label{background:var(--acc);color:var(--bg)}section{display:none;grid-row:3;grid-column:1/-1}main input:checked+label+section{display:block}h2{display:none}
+li{font-size:15px;padding:6px 0}small{font-size:12px}}
 </style></head><body><header><h1>BizIdea 商機雷達</h1><span>今日 ${today}・每小時整點更新，下次 ${next}（港台時間）</span><nav>${srcTabs}</nav></header><main>${cols}</main>
-<footer>資料來源：Google Trends（過去 24 小時，數字係大約搜尋量）・Apple App Store 免費榜（今日排名）・Wikimedia 維基百科（前一日瀏覽量，港澳冇公開數據）。AI 商機篩選即將推出。</footer></body></html>`;
+<footer>資料來源：Google Trends（過去 24 小時，數字係大約搜尋量）・Apple App Store 免費榜（今日排名）・Wikimedia 維基百科（前一日瀏覽量）。澳門冇 Google 數據；港澳冇維基數據；蘇格蘭只有 Google 數據（App Store 同維基併入英國）。AI 商機篩選即將推出。</footer></body></html>`;
 }
 
 export default {
