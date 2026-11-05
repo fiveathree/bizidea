@@ -50,13 +50,16 @@ UTF-8、2 格縮排，用繁體中文、香港廣東話口語，風格參考 `do
 | `trends` | 2–3 個。每個：`title`（最多 10 字）、`detail`（最多 45 字）、`regions` |
 | `watch` | 1–3 句，每句最多 40 字 |
 | `regions` | 物件，12 個地區代碼全部要有，每句最多 30 字；冇數據就講冇數據 |
+| `hot` | 物件，12 個地區代碼全部要有。value = 該地區有商機價值嘅關鍵字陣列，每地區最多 10 個，冇就 `[]`。網站首頁會喺呢啲關鍵字前面加 🔥 |
 | `caveats` | 1–3 句，每句最多 25 字，例如今日邊啲來源缺 |
+
+`hot` 嘅關鍵字要喺 `/tmp/data.json` 同一個地區入面搵到，**同 `keyword` 一字不差**（包括標點、空格、簡繁、大細楷）。直接複製，唔好翻譯、唔好縮短、唔好拆開，例如 App 名「lootjestrekken.nl | drawnames」係一個關鍵字。三個來源都可以揀；只揀合乎第 3 步「商機」定義嘅，唔好揀新聞、政治、明星、比賽同雜訊。
 
 地區代碼只可以用 `HK TW MO JP KR SG TH IN GB GB-SCT NL US`。
 
 ## 第 5 步：檢查
 
-用 `node` 檢查：JSON parse 得到、欄位齊、`regions` 有齊 12 個 key、`score` 係 1–5 整數、所有 `regions` 陣列只用上面嘅代碼。唔啱就改到啱。
+用 `node` 檢查：JSON parse 得到、欄位齊、`regions` 同 `hot` 都有齊 12 個 key 而且只用上面嘅代碼、`score` 係 1–5 整數、所有 `regions` 陣列只用上面嘅代碼、`hot` 每個地區最多 10 個，而且每個關鍵字都喺 `/tmp/data.json` 同一地區三個來源嘅 `keyword` 入面搵到（逐個比對，搵唔到就刪走）。唔啱就改到啱。
 
 ## 第 6 步：更新 `reports/index.json`
 

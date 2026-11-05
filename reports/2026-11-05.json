@@ -7,35 +7,53 @@
       "title": "教中小企用 AI",
       "idea": "開 AI 助手實戰課程同工作坊，幫公司設定 AI 工具；港台澳都適用。",
       "evidence": "ChatGPT、Gemini、Claude、Meta AI 幾乎每區入 App 頭 20；港澳有 Grok、豆包、千問；日新第 1 係 Meta「Muse」。",
-      "regions": ["HK", "TW", "MO", "JP", "SG"],
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG"
+      ],
       "score": 5
     },
     {
       "title": "短劇本地化",
       "idea": "做短劇字幕翻譯、配音，同埋短劇廣告素材製作。",
       "evidence": "紅果短劇喺港台澳 App Store 排第 1；日本有 GoodShort、ReelShort、DramaWave；英國有 FlickReels。",
-      "regions": ["HK", "TW", "MO", "JP", "GB"],
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "GB"
+      ],
       "score": 4
     },
     {
       "title": "日本限定代購",
       "idea": "代購無印良品、麥當勞限定玩具同 Switch 遊戲去港台。",
       "evidence": "日本熱搜「無印良品」1 萬、MUJI App 上榜；「プリキュア ハッピーセット」2 千；Zelda、FF7 有優惠。",
-      "regions": ["JP"],
+      "regions": [
+        "JP"
+      ],
       "score": 4
     },
     {
       "title": "台灣散戶理財內容",
       "idea": "針對散戶焦慮做投資教育內容同理財工具（唔係投資建議）。",
       "evidence": "「股市大跌」「0050」各 1 萬、「台股大跌」2 千、多隻 ETF 同上熱搜；集保 e 存摺 App 上榜。",
-      "regions": ["TW"],
+      "regions": [
+        "TW"
+      ],
       "score": 3
     },
     {
       "title": "荷蘭家居節能",
       "idea": "家用電池、暖氣節能安裝同顧問；歐洲長期趨勢，但離港台較遠。",
       "evidence": "荷蘭熱搜家用電池、暖氣、電價、停電各有幾百至 1 千搜尋。",
-      "regions": ["NL"],
+      "regions": [
+        "NL"
+      ],
       "score": 2
     }
   ],
@@ -43,22 +61,46 @@
     {
       "title": "AI 助手普及",
       "detail": "AI 助手 App 喺所有有數據嘅地區都衝上排行榜。",
-      "regions": ["HK", "TW", "MO", "JP", "SG", "GB", "NL"]
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG",
+        "GB",
+        "NL"
+      ]
     },
     {
       "title": "短劇大熱",
       "detail": "中國短劇 App 喺港台澳登頂，日英都有多個短劇平台上榜。",
-      "regions": ["HK", "TW", "MO", "JP", "GB"]
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "GB"
+      ]
     },
     {
       "title": "年尾購物季",
       "detail": "Black Friday、Shopee 同酷澎 11.11 上榜；Temu、拼多多喺新港澳上榜。",
-      "regions": ["GB", "IN", "SG", "TW", "HK", "MO"]
+      "regions": [
+        "GB",
+        "IN",
+        "SG",
+        "TW",
+        "HK",
+        "MO"
+      ]
     },
     {
       "title": "二手轉售經濟",
       "detail": "英荷有 Vinted；英國 Whatnot 直播賣卡、CrownCards 交易卡上榜。",
-      "regions": ["GB", "NL"]
+      "regions": [
+        "GB",
+        "NL"
+      ]
     }
   ],
   "watch": [
@@ -77,6 +119,118 @@
     "GB-SCT": "Rubicon 飲品回收；其餘多係娛樂。",
     "NL": "家用電池、暖氣、電價；滑雪車貼；聖尼古拉斯節抽籤 App。",
     "US": "熱搜多係美國中期選舉同體育，商業訊號少。"
+  },
+  "hot": {
+    "HK": [
+      "红果短剧 - 海量热门短剧随心看",
+      "Google Gemini",
+      "Meta AI",
+      "Grok - AI 助理",
+      "豆包 - 隨時提供協助的 AI 助理",
+      "拼多多 - 多多买菜，百亿补贴",
+      "積金易 (eMPF)",
+      "aeon",
+      "網約車"
+    ],
+    "TW": [
+      "股市大跌",
+      "0050",
+      "台股大跌",
+      "散戶",
+      "南機場夜市",
+      "红果短剧 - 海量热门短剧随心看",
+      "Meta AI",
+      "Claude by Anthropic",
+      "ChatGPT",
+      "Coupang 酷澎購物 - 11.11 狂購祭"
+    ],
+    "MO": [
+      "红果短剧 - 海量热门短剧随心看",
+      "Meta AI",
+      "Google Gemini",
+      "豆包 - 隨時提供協助的 AI 助理",
+      "千问 - 阿里最强模型官方AI助手",
+      "拼多多 - 多多买菜，百亿补贴",
+      "Trip.com - 酒店機票高鐵預訂平台"
+    ],
+    "JP": [
+      "プリキュア ハッピー セット",
+      "ゼルダ オカリナ",
+      "アソビュー",
+      "Muse from Meta",
+      "ChatGPT",
+      "MUJI アプリ - 無印良品",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "ReelShort - オリジナル短尺ドラマ見放題",
+      "DramaWave - 日本 / 韓国 / 人気短編ドラマ",
+      "Claude by Anthropic"
+    ],
+    "KR": [
+      "제네시스 g90",
+      "1기 신도시",
+      "제주 감귤",
+      "Claude by Anthropic",
+      "피클: 나만의 AI 에이전트",
+      "ChatGPT"
+    ],
+    "SG": [
+      "travel agency",
+      "Temu: Shop Like a Billionaire",
+      "Yindii - Sustainable Food App",
+      "HealthHub SG",
+      "Shopee 11.11 Big Sale",
+      "Muse from Meta",
+      "ChatGPT",
+      "红果短剧 - 海量热门短剧随心看"
+    ],
+    "TH": [
+      "แคนวา",
+      "google classroom",
+      "คลาสรูม",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "PineDrama - Short Dramas",
+      "DramaWave - Dramas & Reels",
+      "ChatGPT"
+    ],
+    "IN": [
+      "ps black friday sale 2026",
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping",
+      "NetShort - Popular Dramas & TV",
+      "ChatGPT"
+    ],
+    "GB": [
+      "exchange rate",
+      "black friday sales",
+      "pound value post brexit high",
+      "FlickReels - AI Story & Drama",
+      "Whatnot: Shop, Sell, Connect",
+      "CrownCards - Trading Cards",
+      "Vinted: Shop & sell pre-loved",
+      "ChatGPT",
+      "Claude by Anthropic"
+    ],
+    "GB-SCT": [
+      "ag barr rubicon drink recall",
+      "uk polar vortex snow weather forecast"
+    ],
+    "NL": [
+      "woningmarkt",
+      "ps5",
+      "lootjestrekken.nl | drawnames",
+      "Vinted: tweedehandsplatform",
+      "Woolsocks: The money app",
+      "Claude by Anthropic",
+      "ChatGPT"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "GoWish - Your Digital Wishlist",
+      "Temu: Shop Like a Billionaire",
+      "ChatGPT",
+      "Claude by Anthropic"
+    ]
   },
   "caveats": [
     "維基雜訊多（成人頁、MediaWiki）",

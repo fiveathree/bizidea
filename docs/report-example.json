@@ -73,6 +73,20 @@
     "NL": "家用電池、暖氣、電價、停電：能源焦慮。",
     "US": "熱搜幾乎全係選舉同 NBA，商業訊號少。"
   },
+  "hot": {
+    "HK": ["红果短剧 - 海量热门短剧随心看", "積金易 (eMPF)"],
+    "TW": ["股市大跌", "南機場夜市", "Coupang 酷澎購物 - 11.11 狂購祭"],
+    "MO": [],
+    "JP": ["プリキュア ハッピー セット", "MUJI アプリ - 無印良品"],
+    "KR": ["1기 신도시"],
+    "SG": ["Yindii - Sustainable Food App", "Shopee 11.11 Big Sale"],
+    "TH": ["แคนวา", "google classroom"],
+    "IN": ["ps black friday sale 2026"],
+    "GB": ["exchange rate", "Vinted: Shop & sell pre-loved"],
+    "GB-SCT": ["ag barr rubicon drink recall"],
+    "NL": ["lootjestrekken.nl | drawnames"],
+    "US": []
+  },
   "caveats": [
     "資料得大約兩日",
     "美國、南韓、泰國、印度 App Store 暫缺",

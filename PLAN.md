@@ -28,7 +28,7 @@
 |---|---|---|
 | 定時收集 | Cloudflare Worker + Cron Trigger（每小時） | 免費額度夠用，原生定時 |
 | 資料庫 | Cloudflare D1 | 原生 SQL，存歷史先計到「連續上升」 |
-| AI 篩選 | Claude API（每日 1 次批量） | 將熱搜分類為「商機 / 新聞 / 娛樂 / 體育 / 其他」 |
+| AI 篩選 | claude.ai 雲端排程（每日 1 次，寫每日報告） | 報告入面嘅 `hot` 揀出商機關鍵字，首頁加 🔥；Worker 唔叫 AI，唔使 API key |
 | 前端 | 同一個 Worker 出一版靜態 HTML（無框架） | 唔使 build step |
 | X (Twitter) 熱話 | Grok API `x_search`（階段 3 先加） | 比 X 官方 API 平好多 |
 
@@ -72,29 +72,21 @@ CREATE TABLE trends (
   seen_at TEXT NOT NULL,        -- ISO 時間：Google 用 RSS pubDate；每日來源用資料日期 T00:00:00Z
   UNIQUE (geo, source, keyword, seen_at)
 );
-
--- AI 每日分析結果
-CREATE TABLE insights (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  day TEXT NOT NULL,            -- YYYY-MM-DD（Asia/Taipei）
-  geo TEXT NOT NULL,
-  keyword TEXT NOT NULL,
-  category TEXT NOT NULL,       -- opportunity / news / entertainment / sports / other
-  idea TEXT,                    -- 一句講點做生意（只限 opportunity）
-  score INTEGER,                -- 1–5 商機分
-  UNIQUE (day, geo, keyword)
-);
+CREATE INDEX idx_trends_seen ON trends(seen_at);  -- 頁面只讀最近幾日，唔使全表掃描
 ```
+
+- 只保留 60 日：每日 UTC 00 點嗰次 cron 刪走更舊嘅行。
+- 原本計劃嘅 `insights` 表已經刪走（階段 2.5 B1）：AI 結果放喺每日報告 JSON（`reports/`），唔入 D1。
 
 「連續上升」直接用 SQL 計（同一關鍵字喺過去 N 日出現嘅日數），唔另外寫邏輯。
 
-## 5. AI 篩選規則（Claude API）
+## 5. AI 篩選規則（每日報告排程）
 
-- 每日一次（台灣時間早上 8:00），將當日所有地區熱搜一次過送去。
-- 要求 AI 回 **JSON**，每個關鍵字：`category`、`score`、`idea`。
+- 每日一次（台灣時間早上 8:00），claude.ai 雲端排程讀 `/api/data`，按 `docs/report-prompt.md` 寫報告，push 去 `reports/`。Worker 本身唔叫 AI，所以唔使 API key。
+- 報告嘅 `hot` 欄位：每個地區有商機價值嘅關鍵字，要同 `/api/data` 嘅 `keyword` 一字不差，首頁就喺呢啲關鍵字前面加 🔥。
 - 「商機」嘅定義：有人想**買**、**學**、**訂**、**搵服務**嘅需求，例如新產品、季節用品、旅遊目的地、新興服務。純新聞事件、明星、比賽結果唔算。
 - `idea` 要具體，一句，例如「日本熱搜某款保溫杯 → 可以代購到台灣」。
-- 用最平又夠用嘅 Claude 模型；Model 名放 config，唔好寫死。
+- 改寫法就改 `docs/report-prompt.md`，唔使改排程。
 
 ## 6. 頁面設計（一版睇晒）
 
@@ -216,7 +208,7 @@ CREATE TABLE insights (
 用戶唔係技術人員，每一步都要由頭教，按鈕名稱要用**現時正確**嘅名稱。
 
 1. Cloudflare 帳戶（用 fiveathree@gmail.com）建立 Worker 同 D1 database
-2. 喺 Worker 加 Secret：`ANTHROPIC_API_KEY`
+2. ~~喺 Worker 加 Secret：`ANTHROPIC_API_KEY`~~：唔再需要，AI 分析由 claude.ai 雲端排程做
 3. 階段 3 先加：`XAI_API_KEY`（Grok）
 4. 設定 Cron Trigger
 
@@ -225,7 +217,7 @@ CREATE TABLE insights (
 | 項目 | 預計 |
 |---|---|
 | Cloudflare Worker + D1 | 免費額度內 |
-| Claude API（每日 1 次，大約 100 個關鍵字） | 幾蚊美金 |
+| 每日報告（claude.ai 雲端排程） | 用緊嘅 Claude 訂閱，唔使另外俾 API 錢 |
 | Grok `x_search`（階段 3） | 工具費大約 US$2 + token |
 
 ## 10. 已知限制

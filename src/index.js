@@ -207,8 +207,20 @@ async function apiData(env) {
   };
 }
 
+// 最新一份每日報告嘅 🔥 商機關鍵字：{ 地區: Set(keyword) }；冇報告就 null
+async function latestHot(env) {
+  try {
+    const [d] = arr(await getReport(env, "index.json"));
+    const hot = d && (await getReport(env, `${d}.json`))?.hot;
+    if (!hot || typeof hot !== "object") return null;
+    return Object.fromEntries(GEOS.map((g) => [g, new Set(arr(hot[g]))]));
+  } catch {
+    return null;
+  }
+}
+
 async function page(env) {
-  const results = await loadRows(env);
+  const [results, hot] = await Promise.all([loadRows(env), latestHot(env)]);
   const today = new Date().toLocaleDateString("sv", { timeZone: "Asia/Taipei" });
   const next = new Date(Math.ceil(Date.now() / 3.6e6) * 3.6e6).toLocaleTimeString("en-GB", {
     timeZone: "Asia/Taipei", hour: "2-digit", minute: "2-digit",
@@ -218,10 +230,10 @@ async function page(env) {
       const items = pick(results, g, src);
       const li = items.length
         ? items
-            .map(
-              (r) =>
-                `<li><a href="${esc(r.news_url || `https://www.google.com/search?q=${encodeURIComponent(r.keyword)}`)}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`
-            )
+            .map((r) => {
+              const h = hot?.[g].has(r.keyword);
+              return `<li${h ? ' class="hot"' : ""}><a href="${esc(r.news_url || `https://www.google.com/search?q=${encodeURIComponent(r.keyword)}`)}" target="_blank" rel="noopener" title="${esc(r.keyword)}">${h ? "🔥 " : ""}${esc(r.keyword)}</a><small>${fmt(r.traffic)}</small></li>`;
+            })
             .join("")
         : `<li class="empty">暫無數據</li>`;
       return `<ol class="${src}">${li}</ol>`;
@@ -230,7 +242,7 @@ async function page(env) {
   }).join("");
   const srcTabs = SOURCES.map(
     ([src, name], i) => `<input type="radio" name="s" id="s_${src}"${i ? "" : " checked"}><label for="s_${src}">${name}</label>`
-  ).join("");
+  ).join("") + (hot ? `<input type="checkbox" id="hot"><label for="hot" title="只睇每日 AI 報告揀出嘅商機關鍵字">🔥 只睇商機</label>` : "");
   const showSrc = SOURCES.map(([src]) => `body:has(#s_${src}:checked) ol.${src}`).join(",");
   return `<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>BizIdea 商機雷達</title><meta name="description" content="${DESC}">${og("BizIdea 商機雷達", DESC, "/")}
@@ -249,6 +261,7 @@ li:not(.empty)::before{counter-increment:n;content:counter(n);color:var(--mute);
 a{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit;text-decoration:none}a:hover{text-decoration:underline}
 small{color:var(--mute);font-size:11px;white-space:nowrap}.empty{color:var(--mute)}
 footer{padding:0 16px 8px;color:var(--mute);font-size:12px}
+body:has(#hot:checked) li:not(.hot){display:none}body:has(#hot:checked) ol:not(:has(.hot))::before{content:"今日冇 🔥 商機";color:var(--mute);font-size:13px}
 a.rep{flex:none;padding:4px 10px;border-radius:999px;background:var(--acc);color:var(--bg);font-size:13px}
 @media(max-width:760px){nav{margin-left:0;width:100%}nav label{flex:1;text-align:center;padding:6px 4px}
 main{grid-template-rows:auto auto minmax(0,1fr);align-content:start;gap:6px}
@@ -256,7 +269,7 @@ main label{display:block;text-align:center;padding:7px 0;border-radius:8px;curso
 main input:checked+label{background:var(--acc);color:var(--bg)}section{display:none;grid-row:3;grid-column:1/-1}main input:checked+label+section{display:block}h2{display:none}
 li{font-size:15px;padding:6px 0}small{font-size:12px}}
 </style></head><body><header><h1>BizIdea 商機雷達</h1><a class="rep" href="/report">📊 今日報告</a><span>今日 ${today}・每小時整點更新，下次 ${next}（港台時間）</span><nav>${srcTabs}</nav></header><main>${cols}</main>
-<footer>資料來源：Google Trends（過去 24 小時，數字係大約搜尋量）・Apple App Store 免費榜（今日排名）・Wikimedia 維基百科（前一日瀏覽量）。澳門冇 Google 數據；港澳冇維基數據；蘇格蘭只有 Google 數據（App Store 同維基併入英國）。AI 商機篩選即將推出。</footer></body></html>`;
+<footer>資料來源：Google Trends（過去 24 小時，數字係大約搜尋量）・Apple App Store 免費榜（今日排名）・Wikimedia 維基百科（前一日瀏覽量）。澳門冇 Google 數據；港澳冇維基數據；蘇格蘭只有 Google 數據（App Store 同維基併入英國）。${hot ? "🔥 = 最新每日報告由 AI 揀出嘅商機關鍵字。" : ""}</footer></body></html>`;
 }
 
 // 每日報告：雲端排程每朝寫 reports/YYYY-MM-DD.json 同 reports/index.json 入 GitHub，呢度直接讀
