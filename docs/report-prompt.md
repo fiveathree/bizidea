@@ -39,7 +39,7 @@ curl -sf https://bizidea.fiveathree.workers.dev/api/data -o /tmp/data.json
 
 ## 第 4 步：寫 `reports/D.json`
 
-UTF-8、2 格縮排，用繁體中文、香港廣東話口語，風格參考 `reports/2026-11-05.json`。字數係上限，網頁要一版睇晒。
+UTF-8、2 格縮排，用繁體中文、香港廣東話口語，風格參考 `docs/report-example.json`（範例，唔好抄內容）。字數係上限，網頁要一版睇晒。
 
 | 欄位 | 內容 |
 |---|---|
