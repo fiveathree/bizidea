@@ -325,7 +325,10 @@ async function reportPage(env, day) {
   const r = day && /^\d{4}-\d{2}-\d{2}$/.test(day) ? await getReport(env, `${day}.json`).catch(() => null) : null;
   const i = days.indexOf(day);
   const prev = days[i + 1], next = i > 0 ? days[i - 1] : null;
-  const navLinks = `${prev ? `<a href="/report/${prev}">← ${prev}</a>` : ""}${next ? `<a href="/report/${next}">${next} →</a>` : ""}`;
+  // 冇上／下一份都留位，日期位置唔會郁
+  const arrow = (d, ch, label) =>
+    d ? `<a class="arr" href="/report/${d}" title="${label}：${d}" aria-label="${label}：${d}">${ch}</a>` : `<span class="arr" aria-hidden="true">${ch}</span>`;
+  const dateNav = `<span class="dnav">${arrow(prev, "‹", "前一日")}<b>${esc(day ?? "")}</b>${arrow(next, "›", "後一日")}</span>`;
 
   const body = !r
     ? `<p class="none">${day ? `${esc(day)} 冇報告。` : "未有報告。"}每日報告喺港台時間朝早 8:00 出。</p>`
@@ -354,7 +357,10 @@ async function reportPage(env, day) {
 :root{--bg:#f6f7f5;--card:#fff;--fg:#1c2421;--mute:#6b7570;--line:#e3e6e3;--acc:#0b7a55;--tag:#e6f2ec}
 @media(prefers-color-scheme:dark){:root{--bg:#121614;--card:#1b201e;--fg:#e8ece9;--mute:#94a09a;--line:#2b322f;--acc:#3ddc97;--tag:#21302a}}
 *{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--fg);height:100dvh;display:flex;flex-direction:column}
-header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:12px 16px 6px}h1{font-size:20px;margin:0}header a{color:var(--acc);text-decoration:none;font-size:13px}header nav{display:flex;gap:12px;margin-left:auto}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:12px 16px 6px}h1{font-size:20px;margin:0}header a{color:var(--acc);text-decoration:none}
+.dnav{display:flex;align-items:center;gap:2px}.dnav b{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;padding:0 2px}
+.arr{width:26px;height:26px;display:grid;place-items:center;border-radius:6px;font-size:20px;line-height:1}a.arr:hover{background:var(--tag)}span.arr{visibility:hidden}
+.close{margin-left:auto;width:32px;height:32px;display:grid;place-items:center;border-radius:8px;font-size:18px;color:var(--mute)!important}.close:hover{background:var(--tag);color:var(--fg)!important}
 main{flex:1;min-height:0;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto minmax(0,1fr) auto;gap:8px;padding:0 16px 8px}
 .headline{grid-column:1/-1;margin:0;font-size:17px;font-weight:600}.none{grid-column:1/-1;color:var(--mute)}
 section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;overflow:hidden;min-height:0}
@@ -370,7 +376,7 @@ input{position:absolute;opacity:0;pointer-events:none}input:focus-visible+label{
 .headline{font-size:15px}label{display:block;text-align:center;padding:7px 0;border-radius:8px;cursor:pointer}input:checked+label{background:var(--acc);color:var(--bg)}
 section{display:none;grid-column:1/-1;grid-row:3;overflow:auto}#v1:checked~.opp,#v2:checked~.trend,#v3:checked~.geo{display:block}
 .opp{grid-template-columns:1fr}dl{grid-template-columns:1fr 1fr}}
-</style></head><body><header><h1>商業分析報告</h1><span>${esc(day ?? "")}</span><a href="/">← 返雷達</a><nav>${navLinks}</nav></header><main>${body}</main></body></html>`;
+</style></head><body><header><h1>商業分析報告</h1>${dateNav}<a class="close" href="/" title="關閉，返商機雷達" aria-label="關閉，返商機雷達">✕</a></header><main>${body}</main></body></html>`;
 }
 
 // Cloudflare 邊緣 cache（Workers Caching，見 wrangler.toml [cache]）：s-maxage = 邊緣存幾耐，max-age = 瀏覽器存幾耐
