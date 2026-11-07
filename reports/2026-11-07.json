@@ -1,0 +1,232 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T00:09:10Z",
+  "headline": "AI 助手、短劇同 11.11 購物節齊上榜，AI 玩具浮現",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳小店開 AI 工作坊，教寫文案、回覆客人同整理報表。",
+      "evidence": "App 榜：港 Meta AI 第 2、Gemini 第 3；台 Meta AI 第 1、Claude 第 3；澳 Meta AI 第 2。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇港第 1、台第 2、澳第 3；日本 ReelShort 第 9；泰國 PineDrama 第 4。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "11.11 跨境優惠整合",
+      "idea": "整合 11.11 同 Black Friday 優惠，做比價頁、團購或代購。",
+      "evidence": "新 Temu 第 1、Shopee 11.11 第 13；台酷澎第 7；泰 Shopee 11.11 第 9；英「when is black friday」1 千。",
+      "regions": [
+        "SG",
+        "TW",
+        "TH",
+        "GB"
+      ],
+      "score": 4
+    },
+    {
+      "title": "二手同卡牌轉售",
+      "idea": "港台做二手轉售代售、卡牌鑑定同直播賣卡服務。",
+      "evidence": "App Store：美 Vinted 第 3；英 Whatnot 第 8、CrownCards 第 7、Vinted 第 13；荷 Vinted 第 13。",
+      "regions": [
+        "US",
+        "GB",
+        "NL"
+      ],
+      "score": 3
+    },
+    {
+      "title": "AI 玩具同聖尼古拉斯抽籤",
+      "idea": "代購或自家設計 AI 互動玩具；荷蘭節日抽籤禮物包。",
+      "evidence": "蘇格蘭熱搜「ai toys」1 千；荷蘭 App 榜「lootjestrekken.nl | drawnames」第 5。",
+      "regions": [
+        "GB-SCT",
+        "NL"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "Claude、ChatGPT、Gemini 喺港台日韓新英荷美都入 App 榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇登頂港台；日泰美英亦有 ReelShort、PineDrama 上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "TH",
+        "GB",
+        "US"
+      ]
+    },
+    {
+      "title": "購物節搶客",
+      "detail": "Temu、Shopee、酷澎 11.11 上榜；英蘇 Black Friday 搜尋出現。",
+      "regions": [
+        "SG",
+        "TW",
+        "TH",
+        "GB",
+        "GB-SCT"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、11.11 連續三日出現。",
+    "日本アソビュー、印度 Black Friday 熱搜今日消失。",
+    "蘇格蘭「ai toys」同荷蘭抽籤 App 係新出現。"
+  ],
+  "regions": {
+    "HK": "天氣、惠康優惠熱搜；紅果短劇第 1。",
+    "TW": "三大法人買賣超 2 萬；Meta AI 第 1。",
+    "MO": "冇 Google 同維基；Meta AI 第 2。",
+    "JP": "地震搜尋極高；Muse from Meta 第 1。",
+    "KR": "熱搜多係退休、股票；Claude 第 3。",
+    "SG": "M1 資料外洩 5 千；Temu 第 1。",
+    "TH": "天氣、六合彩多；PineDrama 第 4。",
+    "IN": "金銀價、板球多；ChatGPT 第 1。",
+    "GB": "二手同卡牌 App 上榜；黑色星期五 1 千。",
+    "GB-SCT": "ai toys 1 千；冇 App 同維基數據。",
+    "NL": "抽籤 App 第 5；Vinted 上榜。",
+    "US": "熱搜多係天氣、股市；Vinted 第 3。"
+  },
+  "hot": {
+    "HK": [
+      "红果短剧 - 海量热门短剧随心看",
+      "Meta AI",
+      "Google Gemini",
+      "Grok - AI 助理",
+      "豆包 - 隨時提供協助的 AI 助理",
+      "積金易 (eMPF)",
+      "拼多多 - 多多买菜，百亿补贴"
+    ],
+    "TW": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "Claude by Anthropic",
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "ChatGPT",
+      "Google Gemini",
+      "ShopBack: 現金回饋平台，網購再賺現金回饋無上限",
+      "Trip.com - 酒店機票高鐵預訂平台"
+    ],
+    "MO": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "Google Gemini",
+      "豆包 - 隨時提供協助的 AI 助理",
+      "千问 - 阿里最强模型官方AI助手",
+      "MUJI app HK & Macao"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "ChatGPT",
+      "ReelShort - オリジナル短尺ドラマ見放題",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "Claude by Anthropic",
+      "ケンタ福袋",
+      "Duolingo：英語、韓国語、中国語を学ぼう",
+      "スターバックス ジャパン公式モバイルアプリ"
+    ],
+    "KR": [
+      "Claude by Anthropic",
+      "피클: 나만의 AI 에이전트",
+      "ReelShort - 드라마 & TV 실시간",
+      "ChatGPT",
+      "듀오링고(Duolingo): 언어 학습"
+    ],
+    "SG": [
+      "Temu: Shop Like a Billionaire",
+      "Shopee 11.11 Big Sale",
+      "Pinduoduo",
+      "Muse from Meta",
+      "Claude by Anthropic",
+      "红果短剧 - 海量热门短剧随心看",
+      "singapore airlines new business class"
+    ],
+    "TH": [
+      "PineDrama - Short Dramas",
+      "FlickReels - AI Story & Drama",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "Dola: Smart AI Assistant",
+      "ChatGPT",
+      "Edu Pass",
+      "new honda avancier"
+    ],
+    "IN": [
+      "ChatGPT",
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping",
+      "Flipkart - Online Shopping App",
+      "reliance jio 10000 rupees plan",
+      "Myntra - Fashion Shopping App"
+    ],
+    "GB": [
+      "CrownCards - Trading Cards",
+      "Whatnot: Shop, Sell, Connect",
+      "Vinted: Shop & sell pre-loved",
+      "Claude by Anthropic",
+      "ChatGPT",
+      "when is black friday",
+      "nintendo switch"
+    ],
+    "GB-SCT": [
+      "ai toys",
+      "when is black friday 2026",
+      "toy"
+    ],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Vinted: tweedehandsplatform",
+      "Woolsocks: The money app",
+      "Joybuy-Don't just buy, Joybuy!",
+      "Claude by Anthropic",
+      "ChatGPT",
+      "nieuwe sinterklaas"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "Muse from Meta",
+      "ChatGPT",
+      "Claude by Anthropic",
+      "irs 2027 tax brackets"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store",
+    "維基多為選舉同雜訊，已略過"
+  ]
+}
