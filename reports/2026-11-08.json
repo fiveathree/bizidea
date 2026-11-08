@@ -1,0 +1,218 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T00:09:23Z",
+  "headline": "AI 助手、短劇、11.11 繼續霸榜，冬季防寒需求浮現",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳小店開 AI 工作坊，教寫文案、回覆客人同整理報表。",
+      "evidence": "App 榜：Meta AI 港第 1、台第 1、澳第 2；Muse 日第 1、新第 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇港第 4、台第 2、澳第 3；泰 PineDrama 第 2。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "11.11 跨境優惠整合",
+      "idea": "整合 11.11 優惠，做比價頁、團購或代購。",
+      "evidence": "App Store：新 Temu 第 1；Shopee 11.11 新第 11、泰第 8；台酷澎第 8。",
+      "regions": [
+        "SG",
+        "TW",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "二手同卡牌轉售",
+      "idea": "港台做二手轉售代售、卡牌鑑定同直播賣卡服務。",
+      "evidence": "美 Vinted 第 3；英 CrownCards 第 7、Whatnot 第 8；荷 Vinted 第 14。",
+      "regions": [
+        "US",
+        "GB",
+        "NL"
+      ],
+      "score": 3
+    },
+    {
+      "title": "冬季防寒用品代購",
+      "idea": "代購英國防寒、暖氣用品，或做港台東北季風保暖套裝。",
+      "evidence": "英熱搜「uk polar vortex winter snow prep」1 萬；港「東北季風」1 萬。",
+      "regions": [
+        "GB",
+        "GB-SCT",
+        "HK"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "Claude、ChatGPT、Gemini 喺港台日韓新泰英荷美都入 App 榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "TH",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇登頂港台澳；泰國 5 個短劇 App 上榜，美日韓亦有。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP",
+        "KR",
+        "US"
+      ]
+    },
+    {
+      "title": "購物節搶客",
+      "detail": "Temu、Shopee、酷澎 11.11 繼續上榜；荷蘭有聖尼古拉斯抽籤熱搜。",
+      "regions": [
+        "SG",
+        "TW",
+        "TH",
+        "NL"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、11.11 連續四日出現。",
+    "蘇格蘭「ai toys」同英國 Black Friday 搜尋今日消失。",
+    "英國極地寒流備冬搜尋同港台普發一萬係新出現。"
+  ],
+  "regions": {
+    "HK": "東北季風、明天的天氣各 1 萬；萬寧、MUJI 上榜。",
+    "TW": "股利 1 萬、普發一萬 5 千；麥當勞 App 第 4。",
+    "MO": "冇 Google 數據；App 榜有消費券小助手、MUJI。",
+    "JP": "App 榜 Muse、7NOW、星巴克上榜；熱搜多係藝人。",
+    "KR": "AI 代理 App 第 2；保險熱搜 2 千。",
+    "SG": "Temu 第 1、Shopee 11.11 第 11。",
+    "TH": "5 個短劇 App 上榜；Shopee 11.11 第 8。",
+    "IN": "熱搜多係板球同彩票；App 榜 Blinkit 第 2。",
+    "GB": "寒流備冬熱搜 1 萬；卡牌、二手 App 上榜。",
+    "GB-SCT": "冇 App、維基數據；熱搜有儲蓄戶口 1 千。",
+    "NL": "Upfront 第 3、Woolsocks 第 4。",
+    "US": "AI 新聞熱搜 2 萬；Vinted 第 3。"
+  },
+  "hot": {
+    "HK": [
+      "萬寧香港",
+      "MUJI app HK & Macao",
+      "红果短剧 - 海量热门短剧随心看",
+      "東北季風",
+      "Meta AI",
+      "Google Gemini",
+      "豆包 - 隨時提供協助的 AI 助理"
+    ],
+    "TW": [
+      "普 發 一 萬",
+      "股利",
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "麥當勞APP",
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "Claude by Anthropic",
+      "NetShort - 熱門短劇盡情觀賞"
+    ],
+    "MO": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "澳門消費券小助手",
+      "豆包 - 隨時提供協助的 AI 助理"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "7NOW(byセブン-イレブン)デリバリー/フードデリバリー",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "ReelShort - オリジナル短尺ドラマ見放題",
+      "セブンイレブン ステッカー",
+      "Duolingo：英語、韓国語、中国語を学ぼう"
+    ],
+    "KR": [
+      "피클: 나만의 AI 에이전트",
+      "ReelShort - 드라마 & TV 실시간",
+      "듀오링고(Duolingo): 언어 학습",
+      "보험",
+      "라면"
+    ],
+    "SG": [
+      "Temu: Shop Like a Billionaire",
+      "Shopee 11.11 Big Sale",
+      "Muse from Meta",
+      "红果短剧 - 海量热门短剧随心看",
+      "CHAGEE"
+    ],
+    "TH": [
+      "PineDrama - Short Dramas",
+      "iDrama – Short Dramas & Reels",
+      "DramaBox - Stream Drama Shorts",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "Dola: Smart AI Assistant"
+    ],
+    "IN": [
+      "Blinkit: Groceries & more",
+      "Flipkart - Online Shopping App",
+      "தங்கம்"
+    ],
+    "GB": [
+      "uk polar vortex winter snow prep",
+      "CrownCards - Trading Cards",
+      "Whatnot: Shop, Sell, Connect",
+      "Vinted: Shop & sell pre-loved",
+      "InPost UK"
+    ],
+    "GB-SCT": [
+      "uk polar vortex winter snow prep",
+      "savings account"
+    ],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Upfront Foodstore",
+      "Woolsocks: The money app",
+      "Vinted: tweedehandsplatform",
+      "wie wordt de nieuwe sinterklaas"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "Muse from Meta",
+      "GoWish - Your Digital Wishlist",
+      "Temu: Shop Like a Billionaire"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store",
+    "維基多為選舉同雜訊，已略過"
+  ]
+}
