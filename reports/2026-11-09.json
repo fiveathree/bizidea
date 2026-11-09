@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-09",
+  "generated_at": "2026-11-09T00:09:42Z",
+  "headline": "AI 助手、短劇、11.11 持續霸榜，台灣冷空氣帶動防寒需求",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳小店開 AI 工作坊，教寫文案、回覆客人同整理報表。",
+      "evidence": "App 榜：Meta AI 港第 1、台第 1、澳第 2；Muse 日第 1、新第 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇港第 3、台第 2、澳第 3；泰國 PineDrama 第 4。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "11.11 跨境優惠整合",
+      "idea": "整合 11.11 優惠，做比價頁、團購或代購服務。",
+      "evidence": "App Store：新 Temu 第 1、Shopee 11.11 第 12；泰 Shopee 第 10；台酷澎第 4。",
+      "regions": [
+        "SG",
+        "TW",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "冬季防寒暖氣用品",
+      "idea": "主打保暖內衣、暖爐、電熱毯套裝，配冷空氣來襲預售推廣。",
+      "evidence": "台灣熱搜「冷空氣來襲」2 萬；南韓「난방」（暖氣）熱搜 5 千。",
+      "regions": [
+        "TW",
+        "KR",
+        "HK"
+      ],
+      "score": 3
+    },
+    {
+      "title": "二手同卡牌轉售",
+      "idea": "港台做二手轉售代售、卡牌鑑定同直播賣卡服務。",
+      "evidence": "美 Vinted 第 3；英 Whatnot 第 5、CrownCards 第 9；荷 Vinted 第 8。",
+      "regions": [
+        "US",
+        "GB",
+        "NL"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "Claude、ChatGPT、Gemini 喺港台日韓新泰英荷美都入 App 榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "TH",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇登頂港台澳；泰國 4 個短劇 App 連續上榜，美日韓亦有。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP",
+        "KR",
+        "US"
+      ]
+    },
+    {
+      "title": "購物節搶客",
+      "detail": "Temu、Shopee、酷澎 11.11 繼續上榜；荷蘭抽籤 App 排第 1。",
+      "regions": [
+        "SG",
+        "TW",
+        "TH",
+        "NL"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、11.11 連續五日出現。",
+    "台灣「冷空氣來襲」2 萬係新出現；港東北季風今日消失。",
+    "英國極地寒流同台灣普發一萬搜尋今日消失。"
+  ],
+  "regions": {
+    "HK": "Meta AI 第 1、MUJI 第 2；天氣 1 萬。",
+    "TW": "天氣 10 萬、冷空氣來襲 2 萬；麥當勞 App 第 3。",
+    "MO": "冇 Google 數據；App 榜有消費券小助手、MUJI。",
+    "JP": "Muse 第 1、7NOW 第 3；熱搜多係天氣同藝人。",
+    "KR": "AI 代理 App 第 2；暖氣熱搜 5 千。",
+    "SG": "Temu 第 1、Shopee 11.11 第 12。",
+    "TH": "4 個短劇 App 上榜；Shopee 第 10。",
+    "IN": "熱搜多係彩票同板球；Blinkit 第 2。",
+    "GB": "Whatnot 第 5、Vinted 第 8、卡牌第 9。",
+    "GB-SCT": "熱搜多係球賽；冇 App Store 同維基數據。",
+    "NL": "抽籤 App 第 1；Vinted 第 8。",
+    "US": "熱搜多係體育同選舉；Vinted 第 3、短劇上榜。"
+  },
+  "hot": {
+    "HK": [
+      "Meta AI",
+      "MUJI app HK & Macao",
+      "红果短剧 - 海量热门短剧随心看",
+      "萬寧香港",
+      "豆包 - 隨時提供協助的 AI 助理",
+      "購物"
+    ],
+    "TW": [
+      "冷空氣來襲",
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "麥當勞APP",
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "Claude by Anthropic",
+      "NetShort - 熱門短劇盡情觀賞"
+    ],
+    "MO": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "澳門消費券小助手"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "7NOW(byセブン-イレブン)デリバリー/フードデリバリー",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "ReelShort - オリジナル短尺ドラマ見放題",
+      "停電"
+    ],
+    "KR": [
+      "피클: 나만의 AI 에이전트",
+      "ReelShort - 드라마 & TV 실시간",
+      "듀오링고(Duolingo): 언어 학습",
+      "난방",
+      "다이소몰",
+      "DramaWave -일본 / 한국 / 인기 단편 드라마"
+    ],
+    "SG": [
+      "Temu: Shop Like a Billionaire",
+      "Shopee 11.11 Big Sale",
+      "Muse from Meta",
+      "红果短剧 - 海量热门短剧随心看",
+      "CHAGEE"
+    ],
+    "TH": [
+      "PineDrama - Short Dramas",
+      "iDrama – Short Dramas & Reels",
+      "DramaBox - Stream Drama Shorts",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "Dola: Smart AI Assistant",
+      "TikTok Shop"
+    ],
+    "IN": [
+      "Blinkit: Groceries & more",
+      "Flipkart - Online Shopping App",
+      "jio 10k recharge plan"
+    ],
+    "GB": [
+      "CrownCards - Trading Cards",
+      "Whatnot: Shop, Sell, Connect",
+      "Vinted: Shop & sell pre-loved",
+      "InPost UK",
+      "zelda ocarina of time remake pc"
+    ],
+    "GB-SCT": [
+      "the entertainer toy sales increase"
+    ],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Upfront Foodstore",
+      "Vinted: tweedehandsplatform",
+      "Woolsocks: The money app"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "Muse from Meta",
+      "GoWish - Your Digital Wishlist",
+      "Temu: Shop Like a Billionaire"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store",
+    "今日所有地區維基數據都係空"
+  ]
+}
