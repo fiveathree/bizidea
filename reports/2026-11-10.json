@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-10T00:10:32Z",
+  "headline": "AI 助手、短劇、11.11 繼續霸榜，英國二手轉售熱",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳中小企開 AI 助手實戰班，教寫文案、客服同整理報表。",
+      "evidence": "App Store：港 Meta AI 第 1、台第 2、日 Muse 第 1、韓 Claude 第 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇台第 1、港澳第 3、星第 5；泰國 PineDrama 第 4。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "11.11 跨境優惠整合",
+      "idea": "整理 11.11 平台優惠，做比價頁、代購團或教學短片。",
+      "evidence": "App Store：台酷澎 11.11 第 4、泰 Shopee 第 10、星 Shopee 第 12。",
+      "regions": [
+        "TW",
+        "SG",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "二手同卡牌轉售",
+      "idea": "跨境收購英國二手衫同卡牌，上架到港台平台轉售。",
+      "evidence": "App Store：英 Whatnot 第 6、CrownCards 第 7；美 Vinted 第 3、荷第 7。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ],
+      "score": 3
+    },
+    {
+      "title": "GTA VI 周邊代購",
+      "idea": "跟進英國 GTA VI 預購資訊，代購主機套裝同周邊俾港台玩家。",
+      "evidence": "Google：英國「gta vi ps5」「selfridges gta 6」各 5 千；日本 PS 5 千。",
+      "regions": [
+        "GB",
+        "JP"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "七個地區 App 榜都有 AI 助手；Meta Muse 喺日本同新加坡入頭三。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果、PineDrama、ReelShort 喺亞洲多地上榜，泰國有四個短劇 App。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH",
+        "JP",
+        "KR"
+      ]
+    },
+    {
+      "title": "二手同剩食平台",
+      "detail": "Vinted 喺英美荷上榜；Too Good To Go 等剩食 App 亦入榜。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、11.11 繼續出現，連續多日。",
+    "台灣「冷空氣來襲」今日消失，轉為「氣溫」5 萬。",
+    "英國 GTA VI 相關搜尋同「Whatnot」新出現。"
+  ],
+  "regions": {
+    "HK": "天氣熱搜 1 萬；Meta AI、MUJI 上榜。",
+    "TW": "氣溫 5 萬；加權指數 2 萬；酷澎 11.11。",
+    "MO": "冇 Google、維基；App 榜有消費券。",
+    "JP": "日經平均 1 萬；Muse 第 1。",
+    "KR": "熱搜多財經名人；Claude 上榜。",
+    "SG": "Toto 1 萬；Shopee 11.11 上榜。",
+    "TH": "彩券 2 萬；四個短劇 App 上榜。",
+    "IN": "熱搜多板球電影；快遞買餸 App 多。",
+    "GB": "GTA VI 各 5 千；Whatnot、Vinted 熱。",
+    "GB-SCT": "熱搜多娛樂；有嚴寒同霧警告。",
+    "NL": "抽籤 App 第 1；Vinted 上榜。",
+    "US": "熱搜全係 NFL、NBA、選舉。"
+  },
+  "hot": {
+    "HK": [
+      "Meta AI",
+      "MUJI app HK & Macao",
+      "红果短剧 - 海量热门短剧随心看",
+      "豆包 - 隨時提供協助的 AI 助理",
+      "萬寧香港",
+      "大 快活 快餐",
+      "Trip.com - 酒店機票高鐵預訂平台"
+    ],
+    "TW": [
+      "红果短剧 - 海量热门短剧随心看",
+      "Meta AI",
+      "麥當勞APP",
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "Claude by Anthropic",
+      "NetShort - 熱門短劇盡情觀賞",
+      "易遊網"
+    ],
+    "MO": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "澳門消費券小助手",
+      "澳門智慧教學"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "7NOW(byセブン-イレブン)デリバリー/フードデリバリー",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "ReelShort - オリジナル短尺ドラマ見放題",
+      "playstation"
+    ],
+    "KR": [
+      "피클: 나만의 AI 에이전트",
+      "Claude by Anthropic",
+      "듀오링고(Duolingo): 언어 학습",
+      "다이소몰",
+      "ReelShort - 드라마 & TV 실시간"
+    ],
+    "SG": [
+      "Temu: Shop Like a Billionaire",
+      "Shopee 11.11 Big Sale",
+      "Muse from Meta",
+      "红果短剧 - 海量热门短剧随心看",
+      "CHAGEE"
+    ],
+    "TH": [
+      "PineDrama - Short Dramas",
+      "iDrama – Short Dramas & Reels",
+      "DramaBox - Stream Drama Shorts",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "Dola: Smart AI Assistant",
+      "TikTok Shop"
+    ],
+    "IN": [
+      "Blinkit: Groceries & more",
+      "Flipkart - Online Shopping App",
+      "Zepto: Groceries in minutes"
+    ],
+    "GB": [
+      "CrownCards - Trading Cards",
+      "Whatnot: Shop, Sell, Connect",
+      "Vinted: Shop & sell pre-loved",
+      "gta vi ps5",
+      "selfridges gta 6",
+      "Too Good To Go: End Food Waste"
+    ],
+    "GB-SCT": [
+      "scotland sub zero temperatures cold snap"
+    ],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Upfront Foodstore",
+      "Vinted: tweedehandsplatform"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "Muse from Meta",
+      "GoWish - Your Digital Wishlist",
+      "Depop - Buy & Sell Clothes"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store 數據",
+    "維基已略過成人同系統頁雜訊"
+  ]
+}
