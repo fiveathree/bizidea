@@ -1,0 +1,213 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T00:09:35Z",
+  "headline": "AI 助手、短劇、11.11 繼續霸榜，香港保溫瓶搜尋急升",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳中小企開 AI 助手實戰班，教寫文案、客服同整理報表。",
+      "evidence": "App Store：港 Meta AI 第 1、澳第 2、台第 2；日 Muse 第 1、韓 Claude 第 6。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇台第 1、港澳第 3、星第 8；泰 PineDrama 第 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "11.11 跨境優惠整合",
+      "idea": "整理 11.11 平台優惠，做比價頁、代購團或教學短片。",
+      "evidence": "App Store：台酷澎 11.11 第 4、泰 Shopee 第 10、星 Shopee 第 14。",
+      "regions": [
+        "TW",
+        "SG",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "GTA VI 預購代購",
+      "idea": "跟進英國 GTA VI 預購資訊，代購主機套裝同周邊俾港台玩家。",
+      "evidence": "Google 英國：「rockstar gta6」1 萬、「gta 6 pre order」1 千。",
+      "regions": [
+        "GB"
+      ],
+      "score": 3
+    },
+    {
+      "title": "保溫瓶同日韓雜貨代購",
+      "idea": "主打冬季保溫瓶，加日韓大創文具、雜貨代購。",
+      "evidence": "Google 港「保溫瓶」1 萬；日「ダイソー パスワード管理ノート」2 千；韓大創第 11。",
+      "regions": [
+        "HK",
+        "JP",
+        "KR"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "港澳台日韓星泰 App 榜都有 AI 助手；Muse 日本第 1、新加坡第 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "TH"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果、PineDrama、GoodShort 喺亞洲多地上榜，美國亦有兩個。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH",
+        "JP",
+        "US"
+      ]
+    },
+    {
+      "title": "二手轉售同抽籤",
+      "detail": "Vinted 喺英美荷上榜；荷蘭聖尼古拉斯節抽籤 App 上榜。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、11.11 連續多日上榜。",
+    "GTA VI 搜尋持續；今日轉做「rockstar gta6」1 萬。",
+    "港「保溫瓶」同台「普發一萬」新出現。"
+  ],
+  "regions": {
+    "HK": "保溫瓶 1 萬；Meta AI、MUJI 上榜。",
+    "TW": "天氣 10 萬；普發一萬 2 千；酷澎 11.11。",
+    "MO": "冇 Google、維基；Meta AI 第 2。",
+    "JP": "エルニーニョ 20 萬；Muse 第 1；簿記 2 千。",
+    "KR": "熱搜多名人；Claude、大創上榜。",
+    "SG": "Temu 第 2；Shopee 11.11 上榜。",
+    "TH": "Dola AI 第 1；多個短劇 App。",
+    "IN": "熱搜多板球；Blinkit、Meesho 上榜。",
+    "GB": "GTA6 預購熱；Whatnot、Vinted 上榜。",
+    "GB-SCT": "冇 App、維基；熱搜多雪同娛樂。",
+    "NL": "氣價 5 千；抽籤 App 第 2。",
+    "US": "熱搜全係 NFL、NBA、選舉。"
+  },
+  "hot": {
+    "HK": [
+      "Meta AI",
+      "MUJI app HK & Macao",
+      "红果短剧 - 海量热门短剧随心看",
+      "保溫瓶",
+      "麥當勞 pokemon",
+      "Trip.com - 酒店機票高鐵預訂平台",
+      "寵物"
+    ],
+    "TW": [
+      "红果短剧 - 海量热门短剧随心看",
+      "Meta AI",
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "Claude by Anthropic",
+      "麥當勞APP",
+      "NetShort - 熱門短劇盡情觀賞",
+      "momo購物 l 值得信賴的購物首選",
+      "普發一萬"
+    ],
+    "MO": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "澳門智慧教學"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "ダイソー パスワード管理ノート",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "簿記",
+      "マクドナルド",
+      "マツキヨココカラ公式アプリ"
+    ],
+    "KR": [
+      "피클: 나만의 AI 에이전트",
+      "Claude by Anthropic",
+      "다이소몰",
+      "듀오링고(Duolingo): 언어 학습",
+      "싸다보카: 영어 공부, 영단어, 회화, 어원, 발음",
+      "배추"
+    ],
+    "SG": [
+      "Temu: Shop Like a Billionaire",
+      "Muse from Meta",
+      "Shopee 11.11 Big Sale",
+      "红果短剧 - 海量热门短剧随心看",
+      "CapCut: Photo & Video Editor"
+    ],
+    "TH": [
+      "Dola: Smart AI Assistant",
+      "PineDrama - Short Dramas",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "TikTok Shop",
+      "DramaWave - Dramas & Reels",
+      "Edu Pass"
+    ],
+    "IN": [
+      "Blinkit: Groceries & more",
+      "samsung galaxy s27 specs",
+      "Meesho: Online Shopping",
+      "Flipkart - Online Shopping App"
+    ],
+    "GB": [
+      "rockstar gta6",
+      "gta 6 pre order",
+      "Whatnot: Shop, Sell, Connect",
+      "CrownCards - Trading Cards",
+      "Vinted: Shop & sell pre-loved",
+      "Too Good To Go: End Food Waste"
+    ],
+    "GB-SCT": [
+      "bottled water",
+      "vinted"
+    ],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "gasprijs",
+      "Vinted: tweedehandsplatform",
+      "Upfront Foodstore"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "Muse from Meta",
+      "GoWish - Your Digital Wishlist"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store 數據",
+    "維基已略過雜訊同成人頁面"
+  ]
+}
