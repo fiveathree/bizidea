@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T00:10:35Z",
+  "headline": "AI 助手、短劇繼續霸榜，黑色星期五同 GTA VI 搜尋升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳中小企開 AI 助手實戰班，教寫文案、客服同整理報表。",
+      "evidence": "App Store：Meta AI 港第 2、澳第 2、台第 2；Muse 日第 1、星第 3；Claude 台第 5。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇台第 1、港澳第 3、星第 8；泰 PineDrama 第 3、美第 6。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH",
+        "US"
+      ],
+      "score": 4
+    },
+    {
+      "title": "黑色星期五優惠整合",
+      "idea": "整理日本 Amazon、台灣黑五同 11.11 優惠，做比價頁或代購團。",
+      "evidence": "Google：台「黑色 星期五」2 千、日「amazonブラックフライデー」2 千；App Store：台酷澎 11.11 第 4。",
+      "regions": [
+        "TW",
+        "JP",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "GTA VI 預購代購",
+      "idea": "跟進 GTA VI 預購同 PS5 Pro 套裝資訊，代購主機同周邊俾港台玩家。",
+      "evidence": "Google：美「gta 6 release」1 萬；英「gta vi ps5 pro」「rockstar gta vi」各 2 千；印「rockstar」2 千。",
+      "regions": [
+        "US",
+        "GB",
+        "IN"
+      ],
+      "score": 3
+    },
+    {
+      "title": "二手轉售同收藏咭",
+      "idea": "開二手平台代售、收藏咭鑑定同直播拍賣教學，服務港台賣家。",
+      "evidence": "App Store：Vinted 美第 3、英第 13、荷第 15；英 Whatnot 第 6、CrownCards 第 7。",
+      "regions": [
+        "US",
+        "GB",
+        "NL"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "港澳台日韓星泰 App 榜都有 AI 助手；Muse 日本第 1。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "TH"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果、PineDrama、GoodShort、NetShort 喺亞洲同美國上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH",
+        "JP",
+        "KR",
+        "US"
+      ]
+    },
+    {
+      "title": "年尾購物季",
+      "detail": "黑五、11.11 搜尋同 Shopee、酷澎、Lazada 一齊上榜。",
+      "regions": [
+        "TW",
+        "JP",
+        "SG",
+        "TH"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、11.11 連續多日上榜。",
+    "GTA VI 搜尋持續，英美印三地都有。",
+    "港「保溫瓶」、台「普發一萬」今日消失；日本黑五新出現。"
+  ],
+  "regions": {
+    "HK": "MUJI 第 1、Meta AI 第 2；今日冇維基。",
+    "TW": "紅果短劇第 1；「黑色 星期五」熱搜 2 千。",
+    "MO": "澳門天氣第 1、Meta AI 第 2；冇 Google。",
+    "JP": "Muse 第 1；黑五同 PS Plus 有搜尋。",
+    "KR": "Pickle AI 第 2、Claude 第 6；大創第 11。",
+    "SG": "CapCut 第 1；Shopee 11.11 第 14。",
+    "TH": "Dola AI 第 1；PineDrama 第 3、Shopee 第 7。",
+    "IN": "GTA 6 搜尋 2 千；購物同外賣 App 活躍。",
+    "GB": "GTA VI 多個搜尋；Vinted 第 13。",
+    "GB-SCT": "冇 App 同維基；熱搜多係天氣同新聞。",
+    "NL": "抽籤 App 第 3；聖尼古拉斯節相關頁上榜。",
+    "US": "Muse 第 2、Vinted 第 3；GTA 6 搜尋 1 萬。"
+  },
+  "hot": {
+    "HK": [
+      "Meta AI",
+      "MUJI app HK & Macao",
+      "红果短剧 - 海量热门短剧随心看",
+      "Trip.com - 酒店機票高鐵預訂平台",
+      "積金易 (eMPF)",
+      "trip"
+    ],
+    "TW": [
+      "红果短剧 - 海量热门短剧随心看",
+      "Meta AI",
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "Claude by Anthropic",
+      "黑色 星期五",
+      "麥當勞APP",
+      "momo購物 l 值得信賴的購物首選",
+      "NetShort - 熱門短劇盡情觀賞",
+      "任天堂",
+      "Health GO 健康夠"
+    ],
+    "MO": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "澳門智慧教學"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "amazonブラックフライデー",
+      "amazon ブラックフライデー",
+      "ps プラス ゲーム カタログ",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "しまむらパーク",
+      "グルメフェス",
+      "マツキヨココカラ公式アプリ"
+    ],
+    "KR": [
+      "피클: 나만의 AI 에이전트",
+      "Claude by Anthropic",
+      "다이소몰",
+      "듀오링고(Duolingo): 언어 학습",
+      "ai안경",
+      "싸다보카: 영어 공부, 영단어, 회화, 어원, 발음",
+      "엽기떡볶이"
+    ],
+    "SG": [
+      "Muse from Meta",
+      "Shopee 11.11 Big Sale",
+      "红果短剧 - 海量热门短剧随心看",
+      "CapCut: Photo & Video Editor",
+      "business class"
+    ],
+    "TH": [
+      "Dola: Smart AI Assistant",
+      "PineDrama - Short Dramas",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "Lazada 11.11 Greatest Sale",
+      "DramaWave - Dramas & Reels",
+      "Edu Pass",
+      "TikTok Shop"
+    ],
+    "IN": [
+      "grand theft auto gta 6",
+      "Meesho: Online Shopping",
+      "Blinkit: Groceries & more",
+      "Edits: Video Editor"
+    ],
+    "GB": [
+      "gta vi ps5 pro",
+      "ps5 pro gta vi",
+      "rockstar gta vi",
+      "gta vi",
+      "Whatnot: Shop, Sell, Connect",
+      "CrownCards - Trading Cards",
+      "Vinted: Shop & sell pre-loved",
+      "Too Good To Go: End Food Waste"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Vinted: tweedehandsplatform",
+      "Woolsocks: The money app",
+      "Joybuy-Don't just buy, Joybuy!",
+      "happy meal"
+    ],
+    "US": [
+      "gta 6 release",
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "Muse from Meta",
+      "GoWish - Your Digital Wishlist",
+      "BlinkDrama - Short Dramas",
+      "coachella 2027 lineup"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store 數據",
+    "維基已略過雜訊同成人頁面"
+  ]
+}
