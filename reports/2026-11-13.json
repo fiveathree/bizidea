@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T00:10:02Z",
+  "headline": "AI 助手、短劇、二手轉售持續熱，荷蘭節日禮物需求升",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台中小企開 AI 助手工作坊，教寫文案、客服同整理報表。",
+      "evidence": "App Store：港 Meta AI 第 1；台 Claude、ChatGPT 上榜；韓「피클」、星 Muse 上榜",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "KR",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：红果短剧港第 3、台第 2、澳第 4；泰美 PineDrama 上榜",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH",
+        "US"
+      ],
+      "score": 4
+    },
+    {
+      "title": "11.11 跨境優惠代購",
+      "idea": "整理東南亞同台灣 11.11 優惠，做比價頁或團購代購。",
+      "evidence": "App Store：台酷澎 11.11 第 7；星泰 Shopee、泰 Lazada 11.11 上榜",
+      "regions": [
+        "TW",
+        "SG",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "幫人鑑定、拍攝同代售二手潮物同收藏咭，做直播或團購。",
+      "evidence": "App Store：英 Whatnot、CrownCards、Vinted；荷美 Vinted 上榜",
+      "regions": [
+        "GB",
+        "NL",
+        "US"
+      ],
+      "score": 3
+    },
+    {
+      "title": "聖尼古拉斯節禮物服務",
+      "idea": "替荷蘭華人客做抽籤交換禮物包、節日禮籃同代購。",
+      "evidence": "荷 App Store：lootjestrekken.nl 第 4；維基 Sint-Maarten 1.4 萬瀏覽",
+      "regions": [
+        "NL",
+        "GB",
+        "US"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "各地 App 榜都有 AI 助手；Meta Muse 喺日、星、美上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "TH",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇持續上榜",
+      "detail": "紅果短劇登港台澳星；泰美有 PineDrama。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG",
+        "TH",
+        "US",
+        "JP"
+      ]
+    },
+    {
+      "title": "節日購物季",
+      "detail": "11.11 App 仍上榜；荷蘭聖尼古拉斯節、韓國 Pepero Day 受關注。",
+      "regions": [
+        "TW",
+        "SG",
+        "TH",
+        "NL",
+        "KR"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、11.11 連續多日上榜。",
+    "GTA VI 英印搜尋消失，只剩美國。",
+    "黑色星期五今日冇再出現；聖尼古拉斯節新上榜。"
+  ],
+  "regions": {
+    "HK": "Meta AI 第 1；紅果短劇、積金易上榜。",
+    "TW": "台股夜盤熱搜 2 萬；酷澎 11.11 上榜。",
+    "MO": "冇 Google 同維基；App 榜有 AI、短劇。",
+    "JP": "Muse 第 1；ゴジラ-0.0 評價熱搜 5 千。",
+    "KR": "Pepero Day 維基上榜；AI 代理 App 上榜。",
+    "SG": "Shopee 11.11、Temu、拼多多上榜。",
+    "TH": "Shopee、Lazada 11.11 同短劇上榜。",
+    "IN": "熱搜多係板球；Meesho、Blinkit 上榜。",
+    "GB": "Vinted、Whatnot 等二手 App 上榜。",
+    "GB-SCT": "只有 Google：愛丁堡、風暴天氣。",
+    "NL": "聖尼古拉斯節抽籤 App 同維基頁上榜。",
+    "US": "熱搜多新聞；PineDrama、Vinted 上榜。"
+  },
+  "hot": {
+    "HK": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "積金易 (eMPF)",
+      "Trip.com - 酒店機票高鐵預訂平台",
+      "豆包 - 隨時提供協助的 AI 助理"
+    ],
+    "TW": [
+      "红果短剧 - 海量热门短剧随心看",
+      "Meta AI",
+      "Claude by Anthropic",
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "麥當勞APP",
+      "momo購物 l 值得信賴的購物首選"
+    ],
+    "MO": [
+      "Meta AI",
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "澳門智慧教學"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "しまむらパーク",
+      "マツキヨココカラ公式アプリ",
+      "ファミマのアプリ「ファミペイ」"
+    ],
+    "KR": [
+      "피클: 나만의 AI 에이전트",
+      "Claude by Anthropic",
+      "다이소몰",
+      "듀오링고(Duolingo): 언어 학습",
+      "빼빼로 데이"
+    ],
+    "SG": [
+      "Muse from Meta",
+      "Shopee 11.11 Big Sale",
+      "红果短剧 - 海量热门短剧随心看",
+      "CapCut: Photo & Video Editor"
+    ],
+    "TH": [
+      "Dola: Smart AI Assistant",
+      "PineDrama - Short Dramas",
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "Lazada 11.11 Greatest Sale",
+      "DramaWave - Dramas & Reels",
+      "Edu Pass"
+    ],
+    "IN": [
+      "Meesho: Online Shopping",
+      "Blinkit: Groceries & more",
+      "Edits: Video Editor"
+    ],
+    "GB": [
+      "Whatnot: Shop, Sell, Connect",
+      "CrownCards - Trading Cards",
+      "Vinted: Shop & sell pre-loved",
+      "GoWish - Your Digital Wishlist"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Sint-Maarten (feest)",
+      "Vinted: tweedehandsplatform",
+      "Woolsocks: The money app",
+      "Joybuy-Don't just buy, Joybuy!"
+    ],
+    "US": [
+      "PineDrama - Short Dramas",
+      "Vinted: Pre-loved marketplace",
+      "GoWish - Your Digital Wishlist",
+      "Muse from Meta",
+      "ps5 pro features gta 6"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇冇維基。",
+    "蘇格蘭冇 App Store。",
+    "已略過成人頁同雜訊。"
+  ]
+}
