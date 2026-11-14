@@ -1,6 +1,6 @@
 {
   "date": "2026-11-14",
-  "generated_at": "2026-11-14T00:09:48Z",
+  "generated_at": "2026-11-14T00:09:58Z",
   "headline": "AI 助手、短劇、二手轉售同年尾優惠續熱，荷蘭抽籤禮物冒起",
   "opportunities": [
     {
@@ -65,7 +65,7 @@
   "trends": [
     {
       "title": "AI 助手普及",
-      "detail": "Claude、ChatGPT、Gemini 八地上榜；Meta Muse 日本、新加坡第 1。",
+      "detail": "Claude、ChatGPT 八地上榜；Meta Muse 日本、新加坡第 1。",
       "regions": [
         "HK",
         "TW",
@@ -107,14 +107,14 @@
   ],
   "regions": {
     "HK": "容祖兒演唱會熱搜 5 千；Meta AI App 第 1。",
-    "TW": "天氣熱搜 10 萬；酷澎 11.11 同麥當勞 App 上榜。",
+    "TW": "天氣熱搜 10 萬；酷澎 11.11 上榜。",
     "MO": "冇 Google 同維基；App 榜有智慧教學同螞蟻銀行。",
     "JP": "足球賽熱搜；Muse 第 1，GoodShort 上榜。",
-    "KR": "天氣熱搜 50 萬；Everland、MUJI 上 App 榜。",
+    "KR": "天氣熱搜 50 萬；Everland 上 App 榜。",
     "SG": "Shopee 11.11 上榜；回收機熱搜 2 千。",
     "TH": "熱搜多係球賽彩票；Shopee 11.11 上榜。",
     "IN": "熱搜多係板球；Blinkit、Meesho 上榜。",
-    "GB": "熱搜多係新聞；Vinted、Whatnot 二手 App 上榜。",
+    "GB": "熱搜多係新聞；Vinted 二手 App 上榜。",
     "GB-SCT": "只有熱搜，天氣下雪同新聞為主，商業訊號少。",
     "NL": "抽籤禮物 App 第 3；按揭利率熱搜 2 千。",
     "US": "熱搜多係天氣體育；Vinted 上 App 榜。"
