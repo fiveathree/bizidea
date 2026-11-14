@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T00:09:48Z",
+  "headline": "AI 助手、短劇、二手轉售同年尾優惠續熱，荷蘭抽籤禮物冒起",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台小店開 AI 工作坊，教寫文案、回覆客人同整理報表。",
+      "evidence": "Claude、ChatGPT、Gemini 喺 App 榜多地上榜；台灣 Claude 第 5、日本 Muse 第 1。",
+      "regions": [
+        "HK",
+        "TW",
+        "JP",
+        "KR",
+        "GB"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "红果短剧 App 榜：港第 3、台第 2、澳第 4；泰國 PineDrama 第 2。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "年尾跨境優惠代購",
+      "idea": "整理 11.11、Black Friday 優惠，做比價頁、代購或團購。",
+      "evidence": "星泰 Shopee 11.11、台灣酷澎上榜；美國「nintendo black friday deals」5 千。",
+      "regions": [
+        "SG",
+        "TH",
+        "TW",
+        "US"
+      ],
+      "score": 4
+    },
+    {
+      "title": "聖尼古拉斯節禮物服務",
+      "idea": "替荷蘭華人或網店做抽籤禮物包、節日禮盒同代寄服務。",
+      "evidence": "荷蘭 App 榜「lootjestrekken.nl | drawnames」第 3；維基聖馬丁節 3.9 千。",
+      "regions": [
+        "NL",
+        "GB"
+      ],
+      "score": 3
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "收購日本或歐美二手物品、收藏咭，經 Vinted 等平台轉售。",
+      "evidence": "英國 App 榜 Whatnot 第 6、Vinted 第 14；美國 Vinted 第 4。",
+      "regions": [
+        "GB",
+        "US"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "Claude、ChatGPT、Gemini 八地上榜；Meta Muse 日本、新加坡第 1。",
+      "regions": [
+        "HK",
+        "TW",
+        "JP",
+        "KR",
+        "SG",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇持續上榜",
+      "detail": "红果短剧登頂港台澳一帶；泰美有 PineDrama，日本有 GoodShort。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP",
+        "US"
+      ]
+    },
+    {
+      "title": "年尾購物季",
+      "detail": "Shopee、酷澎 11.11 同 Black Friday 搜尋齊上榜。",
+      "regions": [
+        "SG",
+        "TH",
+        "TW",
+        "US",
+        "NL"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手同短劇連續多日上榜，仍然係最穩陣商機。",
+    "11.11 優惠由新出現轉為持續；Black Friday 搜尋開始冒起。"
+  ],
+  "regions": {
+    "HK": "容祖兒演唱會熱搜 5 千；Meta AI App 第 1。",
+    "TW": "天氣熱搜 10 萬；酷澎 11.11 同麥當勞 App 上榜。",
+    "MO": "冇 Google 同維基；App 榜有智慧教學同螞蟻銀行。",
+    "JP": "足球賽熱搜；Muse 第 1，GoodShort 上榜。",
+    "KR": "天氣熱搜 50 萬；Everland、MUJI 上 App 榜。",
+    "SG": "Shopee 11.11 上榜；回收機熱搜 2 千。",
+    "TH": "熱搜多係球賽彩票；Shopee 11.11 上榜。",
+    "IN": "熱搜多係板球；Blinkit、Meesho 上榜。",
+    "GB": "熱搜多係新聞；Vinted、Whatnot 二手 App 上榜。",
+    "GB-SCT": "只有熱搜，天氣下雪同新聞為主，商業訊號少。",
+    "NL": "抽籤禮物 App 第 3；按揭利率熱搜 2 千。",
+    "US": "熱搜多係天氣體育；Vinted 上 App 榜。"
+  },
+  "hot": {
+    "HK": [
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao"
+    ],
+    "TW": [
+      "Coupang 酷澎購物 - 11.11 狂購祭",
+      "HealthGO 健康夠",
+      "Trip.com - 酒店機票高鐵預訂平台"
+    ],
+    "MO": [
+      "澳門智慧教學",
+      "螞蟻銀行（澳門）"
+    ],
+    "JP": [
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "Muse from Meta",
+      "ファミマのアプリ「ファミペイ」"
+    ],
+    "KR": [
+      "MUJI KR",
+      "Everland",
+      "피클: 나만의 AI 에이전트"
+    ],
+    "SG": [
+      "Shopee 11.11 Big Sale",
+      "reverse vending machine",
+      "meals on wheels"
+    ],
+    "TH": [
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "PineDrama - Short Dramas",
+      "Edu Pass"
+    ],
+    "IN": [
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping"
+    ],
+    "GB": [
+      "Vinted: Shop & sell pre-loved",
+      "Whatnot: Shop, Sell, Connect",
+      "GoWish - Your Digital Wishlist",
+      "CrownCards - Trading Cards"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Woolsocks: The money app",
+      "Sint-Maarten (feest)"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "nintendo black friday deals"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇冇維基。",
+    "蘇格蘭冇 App Store。",
+    "已略過成人頁同雜訊。"
+  ]
+}
