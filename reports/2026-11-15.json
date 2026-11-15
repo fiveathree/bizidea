@@ -1,0 +1,195 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T00:09:31.536Z",
+  "headline": "AI 助手、短劇、MUJI 同二手轉售續熱，荷蘭抽籤升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台中小企開 AI 助手實戰工作坊，教寫文案、客服、整理報表。",
+      "evidence": "Meta AI 港澳第 2、台第 3；Muse from Meta 日本、新加坡第 1。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "紅果短劇台灣第 1、港澳第 3；PineDrama 泰國第 1、美國第 7。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "US"
+      ],
+      "score": 4
+    },
+    {
+      "title": "MUJI 優惠代購",
+      "idea": "代購日韓 MUJI 限定商品，配合港澳 App 優惠做團購同選物推介。",
+      "evidence": "MUJI app 港澳 App Store 港第 1、澳第 9；MUJI KR 南韓第 1。",
+      "regions": [
+        "HK",
+        "MO",
+        "KR"
+      ],
+      "score": 4
+    },
+    {
+      "title": "年尾購物季比價代購",
+      "idea": "整理跨境電商優惠，做比價頁、代購或團購，配合聖誕送禮。",
+      "evidence": "Shopee 11.11 新加坡第 17、泰國第 11；Temu 新加坡第 3、美國第 16。",
+      "regions": [
+        "SG",
+        "TH",
+        "US",
+        "TW"
+      ],
+      "score": 3
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "教人喺 Vinted 同直播平台轉售二手貨同收藏咭，或代拍代寄。",
+      "evidence": "Vinted 英國第 12、美國第 4；Whatnot 英國第 7；CrownCards 英國第 5。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "ChatGPT、Gemini、Claude 多地上榜；Muse 日新美前二。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇持續上榜",
+      "detail": "紅果短劇港台澳前三；泰國、美國、日本亦有短劇 App。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "US",
+        "JP"
+      ]
+    },
+    {
+      "title": "MUJI App 熱",
+      "detail": "港、南韓 App 榜第 1，澳門第 9，會員優惠帶動。",
+      "regions": [
+        "HK",
+        "MO",
+        "KR"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手同短劇連續多日上榜，仍然最穩陣。",
+    "MUJI 同 Vinted 持續出現，二手同日系選物需求穩。",
+    "Shopee 11.11 仍上榜；荷蘭抽籤 App 續熱。"
+  ],
+  "regions": {
+    "HK": "紅果短劇、MUJI app 上榜；迪士尼樂園同長者日有搜尋。",
+    "TW": "短劇 App 登頂；退休金、股利有 2 千搜尋。",
+    "MO": "冇 Google 數據；App 榜有智慧教學、MUJI。",
+    "JP": "Muse 第 1；MS365 障礙熱搜 2 萬。",
+    "KR": "MUJI 第 1；Pickle AI 上榜。",
+    "SG": "Muse 第 1；Temu、Shopee 11.11 上榜。",
+    "TH": "PineDrama 第 1；Shopee 11.11 上榜。",
+    "IN": "Blinkit、Meesho 上榜；熱搜多係板球。",
+    "GB": "Vinted、Whatnot、收藏咭 App 上榜。",
+    "GB-SCT": "只有熱搜：冬季燃料津貼 2 千；其餘係體育娛樂。",
+    "NL": "抽籤 App 第 3；聖尼古拉斯新聞劇 5 千瀏覽。",
+    "US": "熱搜多係體育；Vinted、Temu 上榜。"
+  },
+  "hot": {
+    "HK": [
+      "红果短剧 - 海量热门短剧随心看",
+      "MUJI app HK & Macao",
+      "香港迪士尼樂園",
+      "长者日"
+    ],
+    "TW": [
+      "红果短剧 - 海量热门短剧随心看",
+      "NetShort - 熱門短劇盡情觀賞",
+      "HealthGO 健康夠",
+      "辦桌"
+    ],
+    "MO": [
+      "澳門智慧教學",
+      "MUJI app HK & Macao",
+      "螞蟻銀行（澳門）",
+      "澳門消費券小助手"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "ファミマのアプリ「ファミペイ」",
+      "マツキヨココカラ公式アプリ"
+    ],
+    "KR": [
+      "MUJI KR",
+      "피클: 나만의 AI 에이전트",
+      "Everland",
+      "29CM"
+    ],
+    "SG": [
+      "Shopee 11.11 Big Sale",
+      "Temu: Shop Like a Billionaire",
+      "christmas atelier 2026",
+      "CHAGEE"
+    ],
+    "TH": [
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "PineDrama - Short Dramas",
+      "DramaWave - Dramas & Reels"
+    ],
+    "IN": [
+      "Dominos Pizza",
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping"
+    ],
+    "GB": [
+      "Vinted: Shop & sell pre-loved",
+      "Whatnot: Shop, Sell, Connect",
+      "CrownCards - Trading Cards",
+      "GoWish - Your Digital Wishlist"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Sinterklaasjournaal (2026)",
+      "Joybuy-Don't just buy, Joybuy!",
+      "Vinted: tweedehandsplatform"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "GoWish - Your Digital Wishlist",
+      "Temu: Shop Like a Billionaire"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇冇維基。",
+    "蘇格蘭冇 App Store。",
+    "已略過成人頁同雜訊。"
+  ]
+}
