@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T00:09:23Z",
+  "headline": "AI 助手、短劇、MUJI 續熱，聖誕送禮同二手轉售升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台中小企開 AI 助手實戰工作坊，教寫文案、客服、整理報表。",
+      "evidence": "Meta AI 港第 2、澳第 4、台第 3；Muse from Meta 日第 1、新第 2；Claude 韓第 4。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG",
+        "KR"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "紅果短劇台第 1、澳第 2、港第 3；PineDrama 泰第 1、美第 5；GoodShort 日第 7。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "US",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "MUJI 優惠代購",
+      "idea": "代購日韓 MUJI 限定商品，配合港澳 App 優惠做團購同選物推介。",
+      "evidence": "MUJI app 港 App Store 第 1、澳第 3；MUJI KR 南韓第 1。",
+      "regions": [
+        "HK",
+        "MO",
+        "KR"
+      ],
+      "score": 4
+    },
+    {
+      "title": "聖誕送禮願望清單",
+      "idea": "做聖誕禮物指南、願望清單團購，或荷蘭聖尼古拉斯節禮物代購。",
+      "evidence": "GoWish 英第 3、美第 7；Gymshark Black Friday 英第 5；HulpSint 荷第 14。",
+      "regions": [
+        "GB",
+        "US",
+        "NL",
+        "HK"
+      ],
+      "score": 3
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "教人喺 Vinted 同直播平台轉售二手貨同收藏咭，或代拍代寄。",
+      "evidence": "Vinted 美第 3、英第 8、荷第 13；Whatnot 英第 4；CrownCards 英第 7。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "ChatGPT、Gemini、Claude 多地上榜；Muse 日美新前二。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇持續上榜",
+      "detail": "紅果短劇港台澳前三；泰國、美國、日本亦有短劇 App。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "US",
+        "JP"
+      ]
+    },
+    {
+      "title": "年尾送禮購物",
+      "detail": "Shopee 11.11、Black Friday、荷蘭抽籤 App 同願望清單一齊上榜。",
+      "regions": [
+        "SG",
+        "TH",
+        "GB",
+        "NL",
+        "US"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手同短劇連續多日上榜，仍然最穩陣。",
+    "MUJI 持續出現；Vinted 英國由第 12 升至第 8。",
+    "Shopee 11.11 仍上榜；荷蘭聖尼古拉斯相關更多。"
+  ],
+  "regions": {
+    "HK": "MUJI app 第 1、紅果短劇第 3；長者日有 1 千搜尋。",
+    "TW": "短劇 App 登頂；麥當勞 APP 第 6、Coupang 第 18。",
+    "MO": "冇 Google 數據；App 榜有 MUJI、消費券小助手。",
+    "JP": "Muse 第 1；積雪預報熱搜 5 千。",
+    "KR": "MUJI 第 1；搜尋有 패딩、샤인머스캣 各 5 千或以下。",
+    "SG": "Muse 第 2、Temu 第 3；Shopee 11.11 第 13。",
+    "TH": "PineDrama 第 1；Shopee 11.11 第 11。",
+    "IN": "Blinkit、Meesho 上榜；熱搜多係板球。",
+    "GB": "GoWish、Whatnot、Vinted、Gymshark 上榜。",
+    "GB-SCT": "只有熱搜：多係體育娛樂；冇商機訊號。",
+    "NL": "抽籤 App 第 3；聖尼古拉斯入境 8 千瀏覽。",
+    "US": "熱搜多係體育；Vinted 第 3、Temu 第 13。"
+  },
+  "hot": {
+    "HK": [
+      "MUJI app HK & Macao",
+      "红果短剧 - 海量热门短剧随心看",
+      "長者日",
+      "長者日交通優惠",
+      "折扣",
+      "好賞買"
+    ],
+    "TW": [
+      "红果短剧 - 海量热门短剧随心看",
+      "NetShort - 熱門短劇盡情觀賞",
+      "HealthGO 健康夠",
+      "麥當勞APP"
+    ],
+    "MO": [
+      "MUJI app HK & Macao",
+      "澳門智慧教學",
+      "澳門消費券小助手",
+      "螞蟻銀行（澳門）"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "マツキヨココカラ公式アプリ",
+      "しまむらパーク"
+    ],
+    "KR": [
+      "MUJI KR",
+      "피클: 나만의 AI 에이전트",
+      "패딩",
+      "샤인머스캣",
+      "Everland"
+    ],
+    "SG": [
+      "Shopee 11.11 Big Sale",
+      "Temu: Shop Like a Billionaire",
+      "CHAGEE"
+    ],
+    "TH": [
+      "Shopee 11.11 ลด ใหญ่ มาก",
+      "PineDrama - Short Dramas",
+      "DramaWave - Dramas & Reels"
+    ],
+    "IN": [
+      "Dominos Pizza",
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping"
+    ],
+    "GB": [
+      "GoWish - Your Digital Wishlist",
+      "Whatnot: Shop, Sell, Connect",
+      "Gymshark: Shop Black Friday",
+      "CrownCards - Trading Cards",
+      "Vinted: Shop & sell pre-loved"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "HulpSint - Sinterklaas belt op",
+      "Sinterklaasjournaal (2026)",
+      "Joybuy-Don't just buy, Joybuy!",
+      "Vinted: tweedehandsplatform"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "PineDrama - Short Dramas",
+      "GoWish - Your Digital Wishlist",
+      "Temu: Shop Like a Billionaire",
+      "Depop - Buy & Sell Clothes"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇冇維基。",
+    "蘇格蘭冇 App Store。",
+    "已略過成人頁同雜訊。"
+  ]
+}
