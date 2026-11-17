@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-17",
+  "generated_at": "2026-11-17T00:09:18Z",
+  "headline": "AI 助手、短劇、MUJI 續熱，日本大雪同年尾優惠升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳中小企開 AI 助手實戰工作坊，教寫文案、客服、整理報表。",
+      "evidence": "App Store：港 Meta AI 第 1、Gemini 第 3；台 Claude 第 8；日 ChatGPT 第 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：台紅果第 1、NetShort 第 4；港澳紅果第 2；泰 PineDrama 第 2。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "MUJI 優惠代購",
+      "idea": "代購日韓港版 MUJI 商品，整理優惠同限定品俾港台客。",
+      "evidence": "App Store：港澳 MUJI app 第 6／第 3；韓國 MUJI KR 第 2。",
+      "regions": [
+        "HK",
+        "MO",
+        "KR"
+      ],
+      "score": 4
+    },
+    {
+      "title": "日本大雪禦寒用品",
+      "idea": "賣防滑鞋套、暖包同雪地旅遊裝備，或做大雪行程資訊頁。",
+      "evidence": "Google 日本：「大雪」10 萬、「天気 雪」10 萬；蘇格蘭雪警告 1 萬。",
+      "regions": [
+        "JP",
+        "GB-SCT"
+      ],
+      "score": 3
+    },
+    {
+      "title": "黑色星期五禮物清單",
+      "idea": "整理 Black Friday 同聖誕願望清單，做比價頁或禮物配搭團購。",
+      "evidence": "App Store：英 Gymshark BF 第 5、GoWish 第 3；美 GoWish 第 5；荷抽籤第 1。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "多地 App 榜都有 ChatGPT、Gemini、Claude；日星 Muse 上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "JP",
+        "SG",
+        "GB",
+        "NL",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇持續爆紅",
+      "detail": "港台澳紅果短劇前 2；泰國 PineDrama、DramaWave 上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP"
+      ]
+    },
+    {
+      "title": "年尾禮物購物",
+      "detail": "願望清單 App 同 Black Friday 優惠喺英美荷上榜。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇、MUJI 連續多日上榜。",
+    "新出現：日本大雪、蘇格蘭雪警告。",
+    "黑色星期五優惠升溫，願望清單 App 持續。"
+  ],
+  "regions": {
+    "HK": "大家樂、股票熱搜；Meta AI 榜首。",
+    "TW": "台股跌點、消費券熱搜；短劇 App 佔榜首。",
+    "MO": "冇 Google；App 榜有天氣、MUJI。",
+    "JP": "大雪熱搜 10 萬；ドコモ通信障害 2 萬。",
+    "KR": "年金熱搜；MUJI、Duolingo 上榜。",
+    "SG": "CapCut、Temu 上榜；ERP 熱搜。",
+    "TH": "天氣同樂透熱搜；短劇、Edu Pass 上榜。",
+    "IN": "外賣、快遞、購物 App 上榜；多數熱搜係體育。",
+    "GB": "Black Friday、Vinted 上榜。",
+    "GB-SCT": "雪警告同 Met Office 熱搜；冇 App 數據。",
+    "NL": "抽籤禮物 App 第 1；保險同手術熱搜 1 萬。",
+    "US": "洪水警報、航空熱搜；GoWish 同 Vinted 上榜。"
+  },
+  "hot": {
+    "HK": [
+      "MUJI app HK & Macao",
+      "紅果短劇 - 好內容多品類隨心看"
+    ],
+    "TW": [
+      "消費 券",
+      "麥當勞APP",
+      "NetShort - 熱門短劇盡情觀賞"
+    ],
+    "MO": [
+      "MUJI app HK & Macao",
+      "UePay"
+    ],
+    "JP": [
+      "大雪",
+      "天気 雪",
+      "GoodShort(グッドショート)-ショートドラマいつでも"
+    ],
+    "KR": [
+      "MUJI KR",
+      "듀오링고(Duolingo): 언어 학습",
+      "Trip.com 트립닷컴 - 여행 할인 예약"
+    ],
+    "SG": [
+      "electronic road pricing",
+      "Temu: Shop Like a Billionaire"
+    ],
+    "TH": [
+      "Edu Pass",
+      "PineDrama - Short Dramas"
+    ],
+    "IN": [
+      "Meesho: Online Shopping",
+      "Blinkit: Groceries & more"
+    ],
+    "GB": [
+      "Gymshark: Shop Black Friday",
+      "GoWish - Your Digital Wishlist",
+      "Vinted: Shop & sell pre-loved"
+    ],
+    "GB-SCT": [
+      "met office weather warnings snow"
+    ],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Vinted: tweedehandsplatform"
+    ],
+    "US": [
+      "GoWish - Your Digital Wishlist",
+      "Vinted: Pre-loved marketplace"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基。",
+    "蘇格蘭冇 App Store 數據。",
+    "已略過維基雜訊同成人頁面。"
+  ]
+}
