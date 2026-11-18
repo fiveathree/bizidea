@@ -1,0 +1,192 @@
+{
+  "date": "2026-11-18",
+  "generated_at": "2026-11-18T00:09:21Z",
+  "headline": "AI 助手、短劇續霸榜，黑色星期五同二手轉售升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳中小企開 AI 助手工作坊，教寫文案、客服、整理報表。",
+      "evidence": "App Store：Meta AI 港排第 1、台第 1、澳第 2；澳門 WorkBuddy 第 19。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇港第 2、台第 2、澳第 3；泰國 PineDrama 第 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "US",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "日本黑五優惠代購",
+      "idea": "整理 Amazon 日本黑五優惠，代購電器同日用品去港台。",
+      "evidence": "Google Trends 日本：amazonブラックフライデー 5 千；Shopee 11.11 新加坡第 16。",
+      "regions": [
+        "JP",
+        "SG"
+      ],
+      "score": 4
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "收購轉售潮牌、卡牌，開 IG 店或直播拍賣。",
+      "evidence": "App Store：美國 Vinted 第 3；英國 Whatnot 第 8、CrownCards 第 6。",
+      "regions": [
+        "GB",
+        "US",
+        "NL"
+      ],
+      "score": 3
+    },
+    {
+      "title": "語言學習小班",
+      "idea": "開日語、英語實用小班，配合旅遊同上班需要。",
+      "evidence": "App Store：多鄰國港第 7、澳第 14、韓第 6；泰國 Edu Pass 第 1。",
+      "regions": [
+        "HK",
+        "MO",
+        "KR",
+        "TH"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "各地榜都有 ChatGPT、Gemini、Claude；日星 Muse 第 1。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG",
+        "KR",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果、NetShort、PineDrama、GoodShort 喺亞洲同美國上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP",
+        "US"
+      ]
+    },
+    {
+      "title": "年尾送禮購物",
+      "detail": "黑五、11.11、荷蘭抽籤同願望清單 App 同時上榜。",
+      "regions": [
+        "JP",
+        "SG",
+        "NL",
+        "US"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 助手、短劇連續多日上榜，仍然最穩陣。",
+    "二手轉售（Vinted）持續；MUJI 淨係南韓上榜。",
+    "日本大雪、蘇格蘭雪警告今日消失，黑五升溫。"
+  ],
+  "regions": {
+    "HK": "Meta AI 第 1、紅果短劇第 2；多鄰國第 7。",
+    "TW": "Meta AI、紅果短劇領先；麥當勞 APP 第 10。",
+    "MO": "冇 Google 數據；AI 同短劇 App 榜上榜。",
+    "JP": "amazon 黑五熱搜 5 千；GoodShort 上榜。",
+    "KR": "MUJI KR 第 3、多鄰國第 6。",
+    "SG": "Shopee 11.11 上榜；PSLE 熱搜 1 千。",
+    "TH": "Edu Pass 第 1、PineDrama 第 3。",
+    "IN": "Blinkit、Meesho 上榜；NEET PG 熱搜。",
+    "GB": "Whatnot、CrownCards、Vinted 上榜。",
+    "GB-SCT": "只有 Google 熱搜，多係天氣同娛樂；冇 App 數據。",
+    "NL": "抽籤 App 第 1；Joybuy、Vinted 上榜。",
+    "US": "Vinted 第 3、GoWish 第 5。"
+  },
+  "hot": {
+    "HK": [
+      "Meta AI",
+      "紅果短劇 - 好內容多品類隨心看",
+      "多鄰國 - 極速學外語"
+    ],
+    "TW": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "NetShort - 熱門短劇盡情觀賞",
+      "麥當勞APP",
+      "HealthGO 健康夠",
+      "金豐AI全能勞動法務管理雲端系統"
+    ],
+    "MO": [
+      "WorkBuddy - AI 工作助理",
+      "多鄰國 - 極速學外語",
+      "澳門智慧教學"
+    ],
+    "JP": [
+      "amazonブラックフライデー",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "マツキヨココカラ公式アプリ"
+    ],
+    "KR": [
+      "MUJI KR",
+      "듀오링고(Duolingo): 언어 학습",
+      "29CM",
+      "Trip.com 트립닷컴 - 여행 할인 예약"
+    ],
+    "SG": [
+      "Shopee 11.11 Big Sale",
+      "CHAGEE",
+      "Temu: Shop Like a Billionaire",
+      "psle results release date 2026"
+    ],
+    "TH": [
+      "Edu Pass",
+      "PineDrama - Short Dramas",
+      "DramaWave - Dramas & Reels"
+    ],
+    "IN": [
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping",
+      "mcc neet pg counselling 2026"
+    ],
+    "GB": [
+      "Vinted: Shop & sell pre-loved",
+      "Whatnot: Shop, Sell, Connect",
+      "CrownCards - Trading Cards"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "lootjestrekken.nl | drawnames",
+      "Joybuy-Don't just buy, Joybuy!",
+      "Vinted: tweedehandsplatform"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "GoWish - Your Digital Wishlist",
+      "Depop - Buy & Sell Clothes",
+      "DealSeek: Coupons & Discounts",
+      "PineDrama - Short Dramas"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store 數據",
+    "維基已略過雜訊同成人頁面"
+  ]
+}
