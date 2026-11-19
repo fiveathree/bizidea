@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T00:15:00Z",
+  "headline": "AI 助手、短劇續霸榜，黑五代購同二手轉售持續升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "開 AI 助手實戰工作坊，教寫文案、客服、整理報表，對象港台澳小店。",
+      "evidence": "App Store：Meta AI 港排 1、台排 2、澳排 3；港有 Gemini 排 3、豆包排 5。",
+      "regions": ["HK", "TW", "MO"],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇台排 1、港排 2、澳排 4；台 NetShort 排 9；泰 PineDrama 排 3。",
+      "regions": ["HK", "TW", "MO", "TH"],
+      "score": 4
+    },
+    {
+      "title": "日本黑五優惠代購",
+      "idea": "整理日本 Amazon 黑五同藥妝優惠，做港台代購團或比價頁。",
+      "evidence": "日本 Google 熱搜「amazon ブラックフライデー 2026」2 千；App 榜有マツキヨココカラ排 17。",
+      "regions": ["JP"],
+      "score": 4
+    },
+    {
+      "title": "語言學習小班",
+      "idea": "開日韓英小班或線上陪練，配合 Duolingo 用家入門後嘅進階需求。",
+      "evidence": "App Store：多鄰國台排 4、日排 2、港排 7、韓排 6、澳排 14。",
+      "regions": ["HK", "TW", "JP", "KR", "MO"],
+      "score": 3
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "做二手衫、收藏咭代售或鑑定整理服務，賣畀海外二手平台用家。",
+      "evidence": "App Store：Vinted 美排 3、荷排 11、英排 14；英 Whatnot 排 8；美 Depop 排 18。",
+      "regions": ["US", "NL", "GB"],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "各地榜都有 ChatGPT、Gemini、Claude；Muse 日排 1。",
+      "regions": ["HK", "TW", "MO", "JP", "SG", "US"]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇港台澳前 4；泰、美亦有 PineDrama、ReelShort 上榜。",
+      "regions": ["HK", "TW", "MO", "TH", "US"]
+    },
+    {
+      "title": "年尾購物季",
+      "detail": "黑五熱搜同 Shopee 11.11、荷蘭抽籤 App 一齊上榜。",
+      "regions": ["JP", "SG", "NL"]
+    }
+  ],
+  "watch": [
+    "AI 課程、短劇本地化連日入榜，已成長期商機。",
+    "二手轉售取代送禮清單，連續兩日由 GB、NL、US 帶動。",
+    "日本黑五代購延續；大雪話題今日消失。"
+  ],
+  "regions": {
+    "HK": "天氣熱搜 1 萬；Meta AI、紅果短劇、多鄰國上榜。",
+    "TW": "天氣熱搜 10 萬；短劇、Claude 上榜。",
+    "MO": "冇 Google 數據；天氣、螞蟻銀行、AI 助手上榜。",
+    "JP": "熊本地震熱搜 10 萬；Amazon 黑五熱搜 2 千。",
+    "KR": "Pickle AI、MUJI KR、29CM 上榜。",
+    "SG": "Shopee 11.11、Temu 上榜；COE 熱搜 2 千。",
+    "TH": "金價熱搜 1 萬；Edu Pass、短劇 App 上榜。",
+    "IN": "多係板球同天氣；Blinkit、Meesho 上榜。",
+    "GB": "落雪熱搜 5 萬；Vinted、Whatnot 上榜。",
+    "GB-SCT": "只有熱搜；Glastonbury 2027 熱搜 2 千。",
+    "NL": "抽籤 App、Vinted、Action 上榜；應節。",
+    "US": "熱搜多係體育同政治；Vinted、GoWish 有商機訊號。"
+  },
+  "hot": {
+    "HK": ["Meta AI", "紅果短劇 - 好內容多品類隨心看", "Google Gemini", "多鄰國 - 極速學外語", "積金易 (eMPF)"],
+    "TW": ["紅果短劇 - 好內容多品類隨心看", "Meta AI", "Claude by Anthropic", "多鄰國 - 極速學外語", "NetShort - 熱門短劇盡情觀賞", "麥當勞APP"],
+    "MO": ["Meta AI", "紅果短劇 - 好內容多品類隨心看", "Google Gemini", "澳門智慧教學", "WorkBuddy - AI 工作助理"],
+    "JP": ["amazon ブラックフライデー 2026", "マツキヨココカラ公式アプリ", "Duolingo：英語、韓国語、中国語を学ぼう", "マクドナルド"],
+    "KR": ["MUJI KR", "29CM", "듀오링고(Duolingo): 언어 학습", "Claude by Anthropic"],
+    "SG": ["Shopee 11.11 Big Sale", "Temu: Shop Like a Billionaire", "CapCut: Photo & Video Editor"],
+    "TH": ["Edu Pass", "PineDrama - Short Dramas", "Shopee TH: ซื้อของออนไลน์ส่งไว"],
+    "IN": ["Blinkit: Groceries & more", "Meesho: Online Shopping"],
+    "GB": ["Vinted: Shop & sell pre-loved", "Whatnot: Shop, Sell, Connect", "InPost UK", "glastonbury 2027"],
+    "GB-SCT": ["glastonbury 2027", "still game tickets"],
+    "NL": ["lootjestrekken.nl | drawnames", "Vinted: tweedehandsplatform", "Action", "Duolingo - Taallessen"],
+    "US": ["Vinted: Pre-loved marketplace", "GoWish - Your Digital Wishlist", "Depop - Buy & Sell Clothes", "ReelShort - Stream Drama & TV"]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基。",
+    "蘇格蘭冇 App Store 數據。"
+  ]
+}
