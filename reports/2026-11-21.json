@@ -1,0 +1,206 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T00:09:07Z",
+  "headline": "AI 助手、短劇續霸榜，GTA VI 熱搜，港台寒流帶動保暖",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "開 AI 助手實戰工作坊，教寫文案、客服、整理報表，對象港台澳小店。",
+      "evidence": "Meta AI 港排 1、台排 2、澳排 3；Gemini 港排 3、澳排 4；台 Claude 排 5。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "紅果短劇台排 1、港澳排 2；泰 PineDrama 排 4；日 GoodShort 排 11。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "GTA VI 預購同攻略",
+      "idea": "做 PS5 主機、遊戲預購代購，或 GTA VI 懶人包、價格比較內容。",
+      "evidence": "維基 GTA VI 美 28.4 萬、英 9.3 萬、印 6.6 萬；印熱搜「gta gta6」5 千。",
+      "regions": [
+        "US",
+        "GB",
+        "IN",
+        "TW",
+        "SG"
+      ],
+      "score": 4
+    },
+    {
+      "title": "寒流保暖用品",
+      "idea": "主打暖爐、電熱毯、發熱衣限時優惠或預購，配合降溫推廣。",
+      "evidence": "香港熱搜「香港寒冷天氣警告」2 萬；台灣「東北 季風」2 萬、「明天的天氣」10 萬。",
+      "regions": [
+        "HK",
+        "TW"
+      ],
+      "score": 3
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "做二手衫、收藏咭代售或鑑定整理服務，對接海外二手平台用家。",
+      "evidence": "英 Whatnot 排 6、CrownCards 排 7、Vinted 排 17；美 Vinted 排 4。",
+      "regions": [
+        "US",
+        "GB"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "各地榜都有 ChatGPT、Gemini、Claude；Muse 日美新加坡上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG",
+        "KR",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇港台澳前 2；泰、日、美都有短劇 App 上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "JP",
+        "US"
+      ]
+    },
+    {
+      "title": "GTA VI 熱潮",
+      "detail": "美、英、印維基瀏覽量高企，多地熱搜同 App 榜有相關字。",
+      "regions": [
+        "US",
+        "GB",
+        "IN",
+        "SG",
+        "TW"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 課程、短劇本地化連續出現，屬長期商機。",
+    "GTA VI 同保暖需求為新增；二手轉售持續。",
+    "黑五字眼轉到英國、蘇格蘭熱搜，繼續留意。"
+  ],
+  "regions": {
+    "HK": "寒冷天氣警告熱搜 2 萬；惠康優惠 2 千。",
+    "TW": "天氣、台股熱搜高；紅果短劇 App 排第 1。",
+    "MO": "冇 Google 同維基；App 榜有 AI、短劇同消費券。",
+    "JP": "Muse 排第 1；星巴克新作熱搜 2 千。",
+    "KR": "Claude 排第 3；MUJI KR 排第 4。",
+    "SG": "Temu 排第 3；CPF 長者增存熱搜 5 千。",
+    "TH": "Edu Pass 排第 1；PineDrama 排第 4。",
+    "IN": "熱搜多板球同金價；GTA VI 維基 6.6 萬。",
+    "GB": "黑五日期熱搜 5 千；Whatnot、Vinted 上榜。",
+    "GB-SCT": "黑五同 GTA 6 銷量熱搜；冇 App 同維基。",
+    "NL": "抽籤 App 排第 8；Claude 排第 3。",
+    "US": "熱搜多地震、體育；Vinted 排第 4。"
+  },
+  "hot": {
+    "HK": [
+      "Meta AI",
+      "紅果短劇 - 好內容多品類隨心看",
+      "Google Gemini",
+      "豆包 - 隨時提供協助的 AI 助理",
+      "積金易 (eMPF)",
+      "香港寒冷天氣警告",
+      "惠 康"
+    ],
+    "TW": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "Meta AI",
+      "Claude by Anthropic",
+      "多鄰國 - 極速學外語",
+      "NetShort - 熱門短劇盡情觀賞",
+      "東北 季風",
+      "俠盜獵車手VI"
+    ],
+    "MO": [
+      "Meta AI",
+      "紅果短劇 - 好內容多品類隨心看",
+      "Google Gemini",
+      "WorkBuddy - AI 工作助理",
+      "澳門智慧教學"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "Duolingo：英語、韓国語、中国語を学ぼう",
+      "スタバ新作",
+      "グランド・セフト・オートVI"
+    ],
+    "KR": [
+      "피클: 나만의 AI 에이전트",
+      "MUJI KR",
+      "29CM",
+      "듀오링고(Duolingo): 언어 학습",
+      "Claude by Anthropic"
+    ],
+    "SG": [
+      "Shopee 11.11 Big Sale",
+      "Temu: Shop Like a Billionaire",
+      "CapCut: Photo & Video Editor",
+      "Grand Theft Auto VI"
+    ],
+    "TH": [
+      "Edu Pass",
+      "PineDrama - Short Dramas",
+      "Melolo - Short Movie & TV",
+      "Shopee TH: ซื้อของออนไลน์ส่งไว"
+    ],
+    "IN": [
+      "gta gta6",
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping"
+    ],
+    "GB": [
+      "when is black friday 2026",
+      "Whatnot: Shop, Sell, Connect",
+      "CrownCards - Trading Cards",
+      "Vinted: Shop & sell pre-loved"
+    ],
+    "GB-SCT": [
+      "when is black friday",
+      "gta 6 sales"
+    ],
+    "NL": [
+      "Lootjestrekken.nl | Drawnames",
+      "Action",
+      "bol",
+      "Parfumerie Douglas"
+    ],
+    "US": [
+      "is gta 6 on xbox",
+      "Vinted: Pre-loved marketplace",
+      "GoWish - Your Digital Wishlist",
+      "PineDrama - Short Dramas"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基。",
+    "蘇格蘭冇 App Store 數據。",
+    "維基雜訊頁（MediaWiki、.xxx）已略過。"
+  ]
+}
