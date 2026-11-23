@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T00:09:08Z",
+  "headline": "AI 助手、短劇續霸榜，GTA VI 同年尾送禮購物升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "開 AI 助手實戰工作坊，教寫文案、客服、整理報表，對象港台澳小店。",
+      "evidence": "Meta AI 港排 4、台排 3、澳排 3；Gemini 港排 2、澳排 6；台 Claude 排 13",
+      "regions": [
+        "HK",
+        "TW",
+        "MO"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "紅果短劇港台排 1、澳排 2；泰 PineDrama 排 1；韓 DramaBox 排 6",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "KR",
+        "US"
+      ],
+      "score": 4
+    },
+    {
+      "title": "GTA VI 預購同攻略",
+      "idea": "做 PS5 主機、遊戲預購代購，或 GTA VI 懶人包、價格比較內容。",
+      "evidence": "維基 GTA VI 美 14 萬、英 4.2 萬、印 4 萬；美熱搜 metacritic gta vi 1 萬。",
+      "regions": [
+        "US",
+        "GB",
+        "IN",
+        "HK",
+        "TW"
+      ],
+      "score": 4
+    },
+    {
+      "title": "年尾送禮同優惠整合",
+      "idea": "整理黑五優惠同聖誕願望清單，做比價電子報、代購或團購。",
+      "evidence": "美熱搜「2026 black friday deals」5 千；GoWish 美排 10；荷抽籤 App 排 4",
+      "regions": [
+        "US",
+        "GB",
+        "NL"
+      ],
+      "score": 3
+    },
+    {
+      "title": "二手同收藏咭轉售",
+      "idea": "做二手衫、收藏咭代售或鑑定整理服務，對接海外二手平台用家。",
+      "evidence": "App Store：Vinted 美排 3、英排 6、荷排 19；英 Whatnot 排 3。",
+      "regions": [
+        "US",
+        "GB",
+        "NL"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "各地榜都有 ChatGPT、Gemini、Claude；Muse 日、新、美上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "KR",
+        "SG",
+        "US"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇港台澳前 2；泰、韓、美都有短劇 App 上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "KR",
+        "US"
+      ]
+    },
+    {
+      "title": "年尾送禮購物",
+      "detail": "美黑五熱搜；GoWish 美英上榜；荷蘭 Lootjestrekken 排 4。",
+      "regions": [
+        "US",
+        "GB",
+        "NL"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 課程、短劇本地化連續出現，屬長期商機。",
+    "GTA VI、二手轉售持續；黑五轉做送禮願望清單。"
+  ],
+  "regions": {
+    "HK": "紅果短劇排 1；Gemini 排 2；冇維基數據。",
+    "TW": "台股大跌熱搜 2 千；紅果短劇排 1。",
+    "MO": "冇 Google 同維基；App 榜有 AI、短劇、消費券。",
+    "JP": "Muse 排 1；GoodShort 排 11。",
+    "KR": "MUJI 排 1；Claude 排 3。",
+    "SG": "CapCut 排 1；Temu 排 3。",
+    "TH": "PineDrama 排 1；Dola AI 排 4。",
+    "IN": "熱搜多板球、金價；GTA VI 維基 4 萬。",
+    "GB": "Whatnot 排 3、Vinted 排 6。",
+    "GB-SCT": "熱搜多足球同娛樂；冇 App 同維基。",
+    "NL": "Claude 排 1；抽籤 App 排 4。",
+    "US": "黑五熱搜 5 千；Vinted 排 3。"
+  },
+  "hot": {
+    "HK": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "Google Gemini",
+      "Meta AI",
+      "松本清香港",
+      "UNIQLO Hong Kong & Macau",
+      "CaLoMei 卡老味 - Calorie Tracker"
+    ],
+    "TW": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "Meta AI",
+      "Claude by Anthropic",
+      "Google Gemini",
+      "CouponShare 優惠券分享",
+      "foodomo生活好幫手",
+      "HealthGO 健康夠",
+      "台 股 大 跌",
+      "俠盜獵車手VI"
+    ],
+    "MO": [
+      "Meta AI",
+      "紅果短劇 - 好內容多品類隨心看",
+      "Google Gemini",
+      "澳門消費券小助手"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "GoodShort(グッドショート)-ショートドラマいつでも",
+      "Duolingo：英語、韓国語、中国語を学ぼう",
+      "ホットペッパーグルメ",
+      "しまむらパーク"
+    ],
+    "KR": [
+      "MUJI KR",
+      "Claude by Anthropic",
+      "DramaBox - 영화와 숏폼 드라마",
+      "듀오링고(Duolingo): 언어 학습",
+      "캐치테이블"
+    ],
+    "SG": [
+      "Temu: Shop Like a Billionaire",
+      "红果短剧 - 好内容多品类随心看",
+      "Claude by Anthropic",
+      "Shopee 11.11 Big Sale"
+    ],
+    "TH": [
+      "PineDrama - Short Dramas",
+      "Melolo - Short Movie & TV",
+      "Dola: Smart AI Assistant"
+    ],
+    "IN": [
+      "Grand Theft Auto VI",
+      "Blinkit: Groceries & more",
+      "Meesho: Online Shopping"
+    ],
+    "GB": [
+      "Whatnot: Shop, Sell, Connect",
+      "Vinted: Shop & sell pre-loved",
+      "GoWish - Your Digital Wishlist",
+      "Grand Theft Auto VI"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "Lootjestrekken.nl | Drawnames",
+      "Parfumerie Douglas",
+      "Vinted: tweedehandsplatform",
+      "Woolsocks: The money app"
+    ],
+    "US": [
+      "2026 black friday deals",
+      "metacritic gta vi",
+      "Vinted: Pre-loved marketplace",
+      "GoWish - Your Digital Wishlist",
+      "PineDrama - Short Dramas",
+      "Quince: Luxury Essentials",
+      "Grand Theft Auto VI"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基。",
+    "蘇格蘭冇 App Store 數據。",
+    "維基雜訊頁（MediaWiki、.xxx）已略過。"
+  ]
+}
