@@ -1,0 +1,199 @@
+{
+  "date": "2026-11-25",
+  "generated_at": "2026-11-25T00:09:16Z",
+  "headline": "AI 助手、短劇繼續霸榜，日本聯名同 GTA VI 話題升溫",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "開 AI 助手實戰工作坊，教寫文案、客服、整理報表，對象港台小店。",
+      "evidence": "App Store：Gemini 港排 2、澳排 3；Meta AI 台排 3；Claude 台排 6、荷排 2。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "NL"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇港排 1、台排 2、澳排 2；泰 PineDrama 排 2、Melolo 排 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "日本聯名商品代購",
+      "idea": "代購 Chiikawa 7-Eleven 聯名商品同麥當勞福袋，賣畀港台粉絲。",
+      "evidence": "日本 Google 熱搜「ちいかわセブンイレブンコラボ」1 萬、另一寫法 5 千；「マック福袋」2 千。",
+      "regions": [
+        "JP"
+      ],
+      "score": 4
+    },
+    {
+      "title": "GTA VI 預購同攻略",
+      "idea": "做主機、遊戲預購代購，或 GTA VI 懶人包同價格比較內容。",
+      "evidence": "維基 GTA VI 美 10.1 萬、英 2.9 萬、印 2.2 萬；印熱搜「leonida github gta vi」2 萬。",
+      "regions": [
+        "US",
+        "GB",
+        "IN"
+      ],
+      "score": 3
+    },
+    {
+      "title": "聖誕送禮願望清單",
+      "idea": "做聖誕送禮靈感電子報，或代購團購、交換禮物抽籤服務。",
+      "evidence": "App Store：荷 Lootjestrekken 排 6、Joybuy 排 5；美 GoWish 排 7、Koupon 排 17。",
+      "regions": [
+        "NL",
+        "US"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "各地榜都有 ChatGPT、Gemini、Claude；Muse 日、新、英、美上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG",
+        "GB",
+        "US",
+        "NL"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇港台澳前 2；泰國有 PineDrama、Melolo、ReelShort。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "SG",
+        "US"
+      ]
+    },
+    {
+      "title": "年尾送禮購物",
+      "detail": "荷蘭抽籤 App、美國願望清單同優惠券 App 上榜。",
+      "regions": [
+        "NL",
+        "US",
+        "JP"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 課程、短劇本地化連日出現，屬長期商機。",
+    "GTA VI、送禮願望清單持續；日本聯名代購係新出現。",
+    "二手轉售（Vinted、Whatnot）今日排位下跌。"
+  ],
+  "regions": {
+    "HK": "紅果短劇排 1；Gemini 排 2；冇維基數據。",
+    "TW": "台股、美股夜盤熱搜各 10 萬；紅果短劇排 2。",
+    "MO": "冇 Google 同維基；App 榜有 AI、短劇。",
+    "JP": "Chiikawa 7-Eleven 聯名熱搜 1 萬；Muse 排 1。",
+    "KR": "熱搜多球賽同新聞；Claude 排 3、MUJI 排 14。",
+    "SG": "CapCut 排 1；Muse 排 2；Temu 排 3。",
+    "TH": "ShopeePay 排 1；PineDrama 排 2。",
+    "IN": "熱搜多板球；GTA VI 維基 2.2 萬。",
+    "GB": "Whatnot 排 7；Vinted 排 18；CrownCards 排 9。",
+    "GB-SCT": "熱搜多天氣同足球；冇 App 同維基。",
+    "NL": "Claude 排 2；Lootjestrekken 排 6。",
+    "US": "GoWish 排 7；GTA VI 維基 10.1 萬。"
+  },
+  "hot": {
+    "HK": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "Google Gemini",
+      "Meta AI",
+      "豆包 - 生活工作 AI 助手"
+    ],
+    "TW": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "Meta AI",
+      "Claude by Anthropic",
+      "多鄰國 - 極速學外語",
+      "Google Gemini",
+      "ChatGPT"
+    ],
+    "MO": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "Google Gemini",
+      "Meta AI",
+      "豆包 - 生活工作 AI 助手",
+      "千问 - 阿里最强模型官方AI助手"
+    ],
+    "JP": [
+      "Muse from Meta",
+      "ちいかわセブンイレブンコラボ",
+      "セブンイレブン ちいかわ コラボ",
+      "マック福袋",
+      "Claude by Anthropic",
+      "ChatGPT"
+    ],
+    "KR": [
+      "Claude by Anthropic",
+      "듀오링고(Duolingo): 언어 학습",
+      "MUJI KR",
+      "Trip.com 트립닷컴 - 여행 할인 예약"
+    ],
+    "SG": [
+      "Muse from Meta",
+      "红果短剧 - 好内容多品类随心看",
+      "Claude by Anthropic",
+      "CapCut: Photo & Video Editor",
+      "Grand Theft Auto VI"
+    ],
+    "TH": [
+      "PineDrama - Short Dramas",
+      "Melolo - Short Movie & TV",
+      "Dola: Smart AI Assistant",
+      "ReelShort - Stream Drama & TV"
+    ],
+    "IN": [
+      "leonida github gta vi",
+      "Grand Theft Auto VI",
+      "Claude by Anthropic",
+      "Meesho: Online Shopping"
+    ],
+    "GB": [
+      "Whatnot: Shop, Sell, Connect",
+      "Vinted: Shop & sell pre-loved",
+      "CrownCards - Trading Cards",
+      "Claude by Anthropic",
+      "Grand Theft Auto VI"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "Lootjestrekken.nl | Drawnames",
+      "Claude by Anthropic",
+      "Joybuy-Don't just buy, Joybuy!"
+    ],
+    "US": [
+      "Vinted: Pre-loved marketplace",
+      "GoWish - Your Digital Wishlist",
+      "PineDrama - Short Dramas",
+      "Claude by Anthropic",
+      "Grand Theft Auto VI",
+      "Koupon: Promo Codes & Deals"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store",
+    "維基已略過 MediaWiki、成人頁等雜訊"
+  ]
+}
