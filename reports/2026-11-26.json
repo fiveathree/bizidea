@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-26T00:09:01Z",
+  "headline": "AI 助手、短劇持續霸榜，黑五同聖誕送禮需求急升",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "開 AI 助手實戰工作坊，教寫文案、客服、整理報表，對象港台小店。",
+      "evidence": "App Store：Gemini 港排 3、澳排 4；Meta AI 台排 3；Claude 台排 8、荷排 3。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "NL"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "紅果短劇台排 1、澳排 3、港排 4；泰國 Melolo 排 3；印度 DramaBox 排 18。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "IN"
+      ],
+      "score": 4
+    },
+    {
+      "title": "黑五優惠比價代購",
+      "idea": "整理好市多黑五商品同跨境優惠，做比價頁或團購。",
+      "evidence": "台灣熱搜「好 市 多 黑 五 優惠 商品」2 千；酷澎排 15；新加坡 Shopee 12.12 排 19。",
+      "regions": [
+        "TW",
+        "SG"
+      ],
+      "score": 3
+    },
+    {
+      "title": "聖誕送禮願望清單",
+      "idea": "做禮物提案、抽籤交換禮物活動同二手禮物代售服務。",
+      "evidence": "荷蘭 Lootjestrekken 排 7；美國 GoWish 排 9、Vinted 排 4。",
+      "regions": [
+        "NL",
+        "US",
+        "GB"
+      ],
+      "score": 3
+    },
+    {
+      "title": "台灣發票記帳教學",
+      "idea": "教小店用電子發票載具對獎、歸戶同整理記帳，出教學影片。",
+      "evidence": "台灣 App 榜首 12 位內有 4 個發票 App：排 2、4、5、11。",
+      "regions": [
+        "TW"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "Claude、Gemini、ChatGPT 多地上榜；Muse 日新英美入頭 5。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "JP",
+        "SG",
+        "GB",
+        "US",
+        "NL"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇港台澳上榜，泰國有 Melolo、PineDrama，印度有 DramaBox。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "IN",
+        "US"
+      ]
+    },
+    {
+      "title": "年尾購物送禮",
+      "detail": "黑五、12.12、聖誕願望清單同抽籤 App 一齊上榜。",
+      "regions": [
+        "TW",
+        "SG",
+        "NL",
+        "US",
+        "GB"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 課程連續多日出現，係長期商機。",
+    "短劇本地化持續；黑五、發票記帳係新出現。",
+    "GTA VI 同日本聯名代購今日冇再上榜。"
+  ],
+  "regions": {
+    "HK": "Gemini、紅果短劇上榜；熱搜多係娛樂。",
+    "TW": "股市、黑五好市多熱搜；發票 App 佔榜。",
+    "MO": "冇 Google；App 榜有 Gemini、紅果短劇。",
+    "JP": "Muse 上榜；無印良品夾心餅熱搜 2 千。",
+    "KR": "半導體熱搜 5 萬；Claude 排 3。",
+    "SG": "年終花紅熱搜 1 萬；Shopee 12.12 上榜。",
+    "TH": "熱搜多係劇集球賽；短劇 App 排前列。",
+    "IN": "金價熱搜 1 萬；DramaBox 上榜。",
+    "GB": "能源補助熱搜；Vinted 二手 App 上榜。",
+    "GB-SCT": "熱搜多係球賽；平價手機熱搜 1 千。",
+    "NL": "抽籤 App 上榜；退休金熱搜 1 萬。",
+    "US": "感恩節熱搜 10 萬；GoWish 上榜。"
+  },
+  "hot": {
+    "HK": [
+      "Google Gemini",
+      "紅果短劇 - 好內容多品類隨心看",
+      "積金易 (eMPF)",
+      "豆包 - 生活工作 AI 助手"
+    ],
+    "TW": [
+      "好 市 多 黑 五 優惠 商品",
+      "紅果短劇 - 好內容多品類隨心看",
+      "發票怪獸",
+      "Meta AI",
+      "Coupang 酷澎購物-隔日到貨天天低價"
+    ],
+    "MO": [
+      "Google Gemini",
+      "紅果短劇 - 好內容多品類隨心看"
+    ],
+    "JP": [
+      "無印良品 ビターチョコサンド",
+      "Muse from Meta"
+    ],
+    "KR": [
+      "Claude by Anthropic",
+      "듀오링고(Duolingo): 언어 학습"
+    ],
+    "SG": [
+      "year-end bonus",
+      "Shopee 12.12 Birthday Sale",
+      "Temu: Shop Like a Billionaire"
+    ],
+    "TH": [
+      "Melolo - Short Movie & TV",
+      "PineDrama - Short Dramas"
+    ],
+    "IN": [
+      "DramaBox - Stream Drama Shorts"
+    ],
+    "GB": [
+      "Vinted: Shop & sell pre-loved",
+      "who gets the 100 energy payment"
+    ],
+    "GB-SCT": [
+      "best budget phone"
+    ],
+    "NL": [
+      "Lootjestrekken.nl | Drawnames",
+      "Woolsocks: The money app"
+    ],
+    "US": [
+      "GoWish - Your Digital Wishlist",
+      "Vinted: Pre-loved marketplace"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store",
+    "新加坡維基只得 9 項，已略過雜訊"
+  ]
+}
