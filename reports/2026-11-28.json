@@ -1,0 +1,183 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-28T00:09:10Z",
+  "headline": "AI 助手、短劇繼續霸榜，黑五同聖誕願望清單需求持續",
+  "opportunities": [
+    {
+      "title": "中小企 AI 應用課程",
+      "idea": "為港台澳中小企開 AI 助手實戰班，教寫文案、客服、整理報表。",
+      "evidence": "App Store：Gemini、ChatGPT、Claude 喺港澳新日韓榜入頭 20；澳門有 WorkBuddy。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "SG"
+      ],
+      "score": 5
+    },
+    {
+      "title": "短劇字幕同配音本地化",
+      "idea": "替短劇平台做繁中字幕、粵語配音同廣告短片剪輯。",
+      "evidence": "App Store：紅果短劇喺 TW 排第 1、MO 第 2、HK 第 3；泰國有 Melolo、PineDrama。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH"
+      ],
+      "score": 4
+    },
+    {
+      "title": "台灣發票記帳教學",
+      "idea": "教小店用發票載具對獎同記帳，做影片或電子報。",
+      "evidence": "App Store 台灣：發票載具 App 排第 6。",
+      "regions": [
+        "TW"
+      ],
+      "score": 3
+    },
+    {
+      "title": "黑五優惠比價代購",
+      "idea": "整理黑五遊戲機同科技優惠，做比價頁或團購代購。",
+      "evidence": "Google：英國「black friday ps5 console」2 千；荷蘭黑五優惠 5 千。",
+      "regions": [
+        "GB",
+        "NL",
+        "US"
+      ],
+      "score": 3
+    },
+    {
+      "title": "聖誕願望清單服務",
+      "idea": "幫客戶設計禮物清單同抽籤交換禮物活動，做套裝或帶團。",
+      "evidence": "App Store：荷蘭 Lootjestrekken.nl、Drawnames 上榜；美國 GoWish 排第 8。",
+      "regions": [
+        "NL",
+        "US"
+      ],
+      "score": 3
+    }
+  ],
+  "trends": [
+    {
+      "title": "AI 助手普及",
+      "detail": "Meta 新 App Muse 喺日新英美上榜，多地有 Claude。",
+      "regions": [
+        "JP",
+        "SG",
+        "GB",
+        "US",
+        "HK",
+        "MO",
+        "KR"
+      ]
+    },
+    {
+      "title": "短劇爆紅",
+      "detail": "紅果短劇登頂港台澳，泰國亦有三個短劇 App 上榜。",
+      "regions": [
+        "HK",
+        "TW",
+        "MO",
+        "TH",
+        "SG",
+        "US"
+      ]
+    },
+    {
+      "title": "黑五購物季",
+      "detail": "英荷黑五搜尋同泰國 Shopee 12.12 App 上榜，購物季延續。",
+      "regions": [
+        "GB",
+        "NL",
+        "TH"
+      ]
+    }
+  ],
+  "watch": [
+    "AI 課程、短劇本地化連續多日出現，係長期商機。",
+    "發票記帳、聖誕送禮持續；黑五優惠重返英荷。",
+    "日本聯名、GTA VI 今日冇再出現。"
+  ],
+  "regions": {
+    "HK": "八達通熱搜 1 千；紅果短劇、Omart 上榜。",
+    "TW": "發票載具、MUJI 上榜；夜盤熱搜 5 千。",
+    "MO": "冇 Google；App 榜有 WorkBuddy 等。",
+    "JP": "餐飲同零售 App（熱辣椒、松本清）上榜；大雨警報熱搜。",
+    "KR": "Duolingo、兼職 App 上榜；投資、年金熱搜。",
+    "SG": "Temu、拼多多、IKEA App 上榜；天氣熱搜 5 千。",
+    "TH": "Shopee 12.12 上榜；泰服熱搜 2 千。",
+    "IN": "Nykaa、Meesho 購物 App 上榜；多係板球。",
+    "GB": "黑五 PS5 熱搜 2 千；Whatnot 上榜。",
+    "GB-SCT": "冇 App 同維基數據；熱搜多係體育同天氣。",
+    "NL": "黑五優惠熱搜 5 千；抽籤 App 同 Joybuy 上榜。",
+    "US": "熱搜幾乎全係 NFL；Best Buy、GoWish 上榜。"
+  },
+  "hot": {
+    "HK": [
+      "八達通",
+      "紅果短劇 - 好內容多品類隨心看",
+      "Omart 倉儲式購物平台｜高性價比日常選品倉庫",
+      "積金易 (eMPF)",
+      "麥當勞APP"
+    ],
+    "TW": [
+      "發票載具：統一發票對獎+雲端加碼獎+夢幻發票自訂圖片",
+      "紅果短劇 - 好內容多品類隨心看",
+      "MUJI passport 台灣",
+      "嗒奇：機械鍵盤",
+      "Trip.com - 酒店機票高鐵預訂平台"
+    ],
+    "MO": [
+      "紅果短劇 - 好內容多品類隨心看",
+      "WorkBuddy - AI 工作助理"
+    ],
+    "JP": [
+      "ホットペッパーグルメ",
+      "マツキヨココカラ公式アプリ",
+      "ファミマのアプリ「ファミペイ」"
+    ],
+    "KR": [
+      "듀오링고(Duolingo): 언어 학습",
+      "알바몬 - 대한민국 1위 아르바이트 플랫폼",
+      "유니클로 UNIQLO - 쇼핑"
+    ],
+    "SG": [
+      "IKEA – Home furnishings",
+      "Temu: Shop Like a Billionaire",
+      "红果短剧 - 好内容多品类随心看"
+    ],
+    "TH": [
+      "Shopee 12.12 ลดใหญ่วันเกิด",
+      "TikTok Shop",
+      "ชุดไทย"
+    ],
+    "IN": [
+      "Nykaa – Makeup/Beauty Shopping",
+      "Meesho: Online Shopping",
+      "Myntra - Fashion Shopping App"
+    ],
+    "GB": [
+      "black friday ps5 console",
+      "Whatnot: Shop, Sell, Connect",
+      "Boots: Beauty & Pharmacy"
+    ],
+    "GB-SCT": [],
+    "NL": [
+      "best black friday deals",
+      "tweakers black friday deals",
+      "Lootjestrekken.nl | Drawnames",
+      "bakfiets"
+    ],
+    "US": [
+      "GoWish - Your Digital Wishlist",
+      "Best Buy: Tech Deals & Savings",
+      "Vinted: Pre-loved marketplace"
+    ]
+  },
+  "caveats": [
+    "澳門冇 Google；港澳蘇格蘭冇維基",
+    "蘇格蘭冇 App Store 數據",
+    "維基已略過成人頁同雜訊"
+  ]
+}
